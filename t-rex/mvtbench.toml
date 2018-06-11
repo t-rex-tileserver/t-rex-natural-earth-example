@@ -74,18 +74,6 @@ minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_10m_admin_0_boundary_lines_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 
-[[tileset.layer]]
-name = "countries"  # FIXME
-table_name = "ne_110m_admin_0_countries"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-
 [[tileset]]
 name = "ne_50m_admin_0_boundary_lines_disputed_areas"
 extent = [-58.42741, 1.46686, 149.35841, 48.70561]
@@ -1242,9 +1230,9 @@ maxzoom = 10
 sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_10m_ocean WHERE wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-#[cache.file]
-#base = "/tmp/mvtcache"
-#baseurl = "http://example.com/tiles"
+[cache.file]
+base = "/tmp/mvtcache"
+baseurl = "http://example.com/tiles"
 
 [webserver]
 # Bind address. Use 0.0.0.0 to listen on all adresses.

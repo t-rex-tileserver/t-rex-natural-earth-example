@@ -12,11 +12,11 @@ seed_region_4:
 
 http:
 	# 1 connection
-	docker run --rm --net=host williamyeh/wrk --latency -d 5 -c 1 --timeout 8 -t 1 http://127.0.0.1:6767/ne/7/69/47.pbf
+	docker run --rm --net=host williamyeh/wrk -H 'Accept-Encoding: gzip' -H 'Connection: keep-alive' --latency -d 5 -c 4 --timeout 8 -t 1 http://127.0.0.1:6767/ne/7/69/47.pbf
 	# 4 connections
-	docker run --rm --net=host williamyeh/wrk --latency -d 5 -c 4 --timeout 8 -t 4 http://127.0.0.1:6767/ne/7/69/47.pbf
+	docker run --rm --net=host williamyeh/wrk -H 'Accept-Encoding: gzip' -H 'Connection: keep-alive' --latency -d 5 -c 4 --timeout 8 -t 4 http://127.0.0.1:6767/ne/7/69/47.pbf
 	# 32 connections
-	docker run --rm --net=host williamyeh/wrk --latency -d 5 -c 32 --timeout 8 -t 4 http://127.0.0.1:6767/ne/7/69/47.pbf
+	docker run --rm --net=host williamyeh/wrk -H 'Accept-Encoding: gzip' -H 'Connection: keep-alive' --latency -d 5 -c 32 --timeout 8 -t 4 http://127.0.0.1:6767/ne/7/69/47.pbf
 
 stats:
 	find /tmp/mvtcache/ne -name '*pbf' | wc -l

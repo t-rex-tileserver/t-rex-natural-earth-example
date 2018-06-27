@@ -12,12 +12,19 @@ Measurement targets:
 DB Setup
 --------
 
-Data: NaturalEarth 4.1 ([Site](http://www.naturalearthdata.com/) / [Github](https://github.com/nvkelso/natural-earth-vector)) is used as test data.
-
     # Set Postgresql environment variables when needed: PGHOST, PGPORT, PGUSER, PGPASSWORD
     cd data
-    make
-    make db
+    make createdb
+
+### From GeoPackage
+
+    make gpkgrestore
+
+### From raw data
+
+Data: NaturalEarth 4.1 ([Site](http://www.naturalearthdata.com/) / [Github](https://github.com/nvkelso/natural-earth-vector)) is used as test data.
+
+    make data import
 
 Run benchmark
 -------------

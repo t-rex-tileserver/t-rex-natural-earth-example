@@ -1,4 +1,21 @@
-all: packages/natural_earth_vector.sqlite
+DBNAME = mvtbench
+
+createdb:
+	psql postgres -c "DROP DATABASE IF EXISTS $(DBNAME)"
+	psql postgres -c "CREATE DATABASE $(DBNAME)"
+	psql $(DBNAME) -c "CREATE EXTENSION postgis"
+
+# GPKG dump
+
+gpkgdump:
+	ogr2ogr -f GPKG mvtbench.gpkg PG:dbname=$(DBNAME)
+
+gpkgrestore:
+	ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) mvtbench.gpkg
+
+# Raw data import
+
+data: packages/natural_earth_vector.sqlite
 
 natural_earth_vector.sqlite.zip:
 	wget http://naciscdn.org/naturalearth/packages/natural_earth_vector.sqlite.zip
@@ -82,9 +99,6 @@ POINT_LAYERS = ne_10m_admin_0_label_points \
 # Difference to  tegola-osm/natural_earth.sh:
 # ne_10m_parks_and_protected_lands.shp -> ne_10m_parks_and_protected_lands_area
 
-db: packages/natural_earth_vector.sqlite
-	psql postgres -c "DROP DATABASE IF EXISTS mvtbench"
-	psql postgres -c "CREATE DATABASE mvtbench"
-	psql mvtbench -c "CREATE EXTENSION postgis"
-	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=mvtbench -t_srs EPSG:3857 -nlt PROMOTE_TO_MULTI $< $(LAYERS)
-	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=mvtbench -t_srs EPSG:3857 $< $(POINT_LAYERS)
+import: packages/natural_earth_vector.sqlite
+	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 -nlt PROMOTE_TO_MULTI $< $(LAYERS)
+	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 $< $(POINT_LAYERS)

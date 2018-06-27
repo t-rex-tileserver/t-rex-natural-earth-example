@@ -27,6 +27,7 @@ fid_field = "ogc_fid"
 srid = 3857
 buffer_size = 0
 [[tileset.layer.query]]
+# ne_10m_admin_0_label_points
 minzoom = 1
 maxzoom = 10
 sql = """SELECT wkb_geometry,"ogc_fid","sr_subunit","scalerank" FROM ne_10m_admin_0_label_points WHERE scalerank < !zoom! AND wkb_geometry && !bbox!"""
@@ -42,6 +43,7 @@ fid_field = "ogc_fid"
 srid = 3857
 buffer_size = 0
 [[tileset.layer.query]]
+# ne_10m_admin_1_label_points
 minzoom = 1
 maxzoom = 10
 sql = """SELECT wkb_geometry,"ogc_fid","adm0_sr","name","scalerank" FROM ne_10m_admin_1_label_points WHERE scalerank < !zoom! AND wkb_geometry && !bbox!"""
@@ -74,12 +76,8 @@ minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_10m_admin_0_boundary_lines_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 
-[[tileset]]
-name = "ne_50m_admin_0_boundary_lines_disputed_areas"
-extent = [-58.42741, 1.46686, 149.35841, 48.70561]
 [[tileset.layer]]
-name = "ne_50m_admin_0_boundary_lines_disputed_areas"
-table_name = "ne_50m_admin_0_boundary_lines_disputed_areas"
+name = "boundary_lines_disputed"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -88,34 +86,21 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","min_zoom","note" FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_admin_0_boundary_lines_disputed_areas
+minzoom = 3
+maxzoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset]]
-name = "ne_10m_admin_0_boundary_lines_disputed_areas"
-extent = [-89.19314, -23.83758, 149.35934, 48.70561]
-[[tileset.layer]]
-name = "ne_10m_admin_0_boundary_lines_disputed_areas"
-table_name = "ne_10m_admin_0_boundary_lines_disputed_areas"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","comment","adm0_usa","adm0_left","adm0_right","adm0_a3_l","adm0_a3_r","sov_a3_l","sov_a3_r","left_label","right_labe","brk_a3_l","brk_a3_r","brk_name_l","brk_name_r","note","scalerank","min_zoom" FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_0_boundary_lines_disputed_areas
+minzoom = 5
+maxzoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_parks_and_protected_lands_area"
-extent = [-167.52108, 19.05786, -78.15373, 68.65548]
 [[tileset.layer]]
-name = "ne_10m_parks_and_protected_lands_area"
-table_name = "ne_10m_parks_and_protected_lands_area"
+name = "parks_and_protected_lands_area"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -124,16 +109,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","unit_code","unit_name","unit_type","nps_region","scalerank","featurecla","note","name" FROM ne_10m_parks_and_protected_lands_area WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_parks_and_protected_lands_area
+minzoom = 5
+maxzoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name" FROM ne_10m_parks_and_protected_lands_area WHERE wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_area WHERE wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_parks_and_protected_lands_line"
-extent = [-156.53971, 26.55876, -68.92375, 59.14258]
 [[tileset.layer]]
-name = "ne_10m_parks_and_protected_lands_line"
-table_name = "ne_10m_parks_and_protected_lands_line"
+name = "parks_and_protected_lands_line"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -142,16 +126,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","unit_code","unit_name","unit_type","nps_region","scalerank","featurecla","note","name" FROM ne_10m_parks_and_protected_lands_line WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_parks_and_protected_lands_line
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name" FROM ne_10m_parks_and_protected_lands_line WHERE wkb_geometry && !bbox!"""
 #     sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_line WHERE wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_parks_and_protected_lands_point"
-extent = [-174.46548, -14.28517, 177.49855, 59.63158]
 [[tileset.layer]]
-name = "ne_10m_parks_and_protected_lands_point"
-table_name = "ne_10m_parks_and_protected_lands_point"
+name = "parks_and_protected_lands_point"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
 srid = 3857
@@ -159,16 +142,15 @@ srid = 3857
 #tile_size = "4096"
 buffer_size = 0
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","unit_code","unit_name","unit_type","nps_region","scalerank","featurecla","name" FROM ne_10m_parks_and_protected_lands_point WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_parks_and_protected_lands_point
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name" FROM ne_10m_parks_and_protected_lands_point WHERE wkb_geometry && !bbox!"""
 #     sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_point WHERE wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_admin_0_boundary_lines_map_units"
-extent = [-3.21512, 5.99872, 48.95149, 55.80549]
 [[tileset.layer]]
-name = "ne_10m_admin_0_boundary_lines_map_units"
-table_name = "ne_10m_admin_0_boundary_lines_map_units"
+name = "map_units"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -177,16 +159,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","comment","adm0_a3","adm0_name","mapcolor9","scalerank","min_zoom" FROM ne_10m_admin_0_boundary_lines_map_units WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_0_boundary_lines_map_units
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_admin_0_boundary_lines_map_units WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_map_units WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_admin_0_boundary_lines_maritime_indicator"
-extent = [-180.00000, -58.37530, 178.74829, 82.21700]
 [[tileset.layer]]
-name = "ne_50m_admin_0_boundary_lines_maritime_indicator"
-table_name = "ne_50m_admin_0_boundary_lines_maritime_indicator"
+name = "boundary_lines_maritime"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -195,34 +176,22 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","pacgroup","min_zoom" FROM ne_50m_admin_0_boundary_lines_maritime_indicator WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_admin_0_boundary_lines_maritime_indicator
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_50m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_admin_0_boundary_lines_maritime_indicator"
-extent = [-179.87209, -58.37588, 179.99950, 82.21688]
-[[tileset.layer]]
-name = "ne_10m_admin_0_boundary_lines_maritime_indicator"
-table_name = "ne_10m_admin_0_boundary_lines_maritime_indicator"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","pacgroup","note","comment","min_zoom" FROM ne_10m_admin_0_boundary_lines_maritime_indicator WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_0_boundary_lines_maritime_indicator
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_admin_0_countries"
-extent = [-180.00000, -85.60904, 180.00000, 83.64513]
 [[tileset.layer]]
-name = "ne_110m_admin_0_countries"
-table_name = "ne_110m_admin_0_countries"
+name = "countries"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -231,52 +200,32 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","labelrank","sovereignt","sov_a3","adm0_dif","level","type","admin","adm0_a3","geou_dif","geounit","gu_a3","su_dif","subunit","su_a3","brk_diff","name","name_long","brk_a3","brk_name","brk_group","abbrev","postal","formal_en","formal_fr","name_ciawf","note_adm0","note_brk","name_sort","name_alt","mapcolor7","mapcolor8","mapcolor9","mapcolor13","pop_est","pop_rank","gdp_md_est","pop_year","lastcensus","gdp_year","economy","income_grp","wikipedia","fips_10_","iso_a2","iso_a3","iso_a3_eh","iso_n3","un_a3","wb_a2","wb_a3","woe_id","woe_id_eh","woe_note","adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb","continent","region_un","subregion","region_wb","name_len","long_len","abbrev_len","tiny","homepart","min_zoom","min_label","max_label","ne_id","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh" FROM ne_110m_admin_0_countries WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_admin_0_countries
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","name_long","abbrev","adm0_a3_un" AS adm0_a3,"min_zoom","min_label","max_label" FROM ne_110m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# ? "adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_110m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_admin_0_countries"
-extent = [-180.00000, -89.99893, 180.00000, 83.59961]
-[[tileset.layer]]
-name = "ne_50m_admin_0_countries"
-table_name = "ne_50m_admin_0_countries"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","labelrank","sovereignt","sov_a3","adm0_dif","level","type","admin","adm0_a3","geou_dif","geounit","gu_a3","su_dif","subunit","su_a3","brk_diff","name","name_long","brk_a3","brk_name","brk_group","abbrev","postal","formal_en","formal_fr","name_ciawf","note_adm0","note_brk","name_sort","name_alt","mapcolor7","mapcolor8","mapcolor9","mapcolor13","pop_est","pop_rank","gdp_md_est","pop_year","lastcensus","gdp_year","economy","income_grp","wikipedia","fips_10_","iso_a2","iso_a3","iso_a3_eh","iso_n3","un_a3","wb_a2","wb_a3","woe_id","woe_id_eh","woe_note","adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb","continent","region_un","subregion","region_wb","name_len","long_len","abbrev_len","tiny","homepart","min_zoom","min_label","max_label","ne_id","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh" FROM ne_50m_admin_0_countries WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_admin_0_countries
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","name_long","abbrev","adm0_a3_un" AS adm0_a3,"min_zoom","min_label","max_label" FROM ne_50m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# ? "adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_50m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_admin_0_countries"
-extent = [-180.00000, -89.50139, 180.00000, 83.63410]
-[[tileset.layer]]
-name = "ne_10m_admin_0_countries"
-table_name = "ne_10m_admin_0_countries"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","labelrank","sovereignt","sov_a3","adm0_dif","level","type","admin","adm0_a3","geou_dif","geounit","gu_a3","su_dif","subunit","su_a3","brk_diff","name","name_long","brk_a3","brk_name","brk_group","abbrev","postal","formal_en","formal_fr","name_ciawf","note_adm0","note_brk","name_sort","name_alt","mapcolor7","mapcolor8","mapcolor9","mapcolor13","pop_est","pop_rank","gdp_md_est","pop_year","lastcensus","gdp_year","economy","income_grp","wikipedia","fips_10_","iso_a2","iso_a3","iso_a3_eh","iso_n3","un_a3","wb_a2","wb_a3","woe_id","woe_id_eh","woe_note","adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb","continent","region_un","subregion","region_wb","name_len","long_len","abbrev_len","tiny","homepart","min_zoom","min_label","max_label","ne_id","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh" FROM ne_10m_admin_0_countries WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_0_countries
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","name_long","abbrev","adm0_a3_un" AS adm0_a3,"min_zoom","min_label","max_label" FROM ne_10m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# ? "adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_10m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_admin_0_map_subunits"
-extent = [-180.00000, -89.99893, 180.00000, 83.59961]
 [[tileset.layer]]
-name = "ne_50m_admin_0_map_subunits"
-table_name = "ne_50m_admin_0_map_subunits"
+name = "admin_0_map_subunits"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -285,34 +234,24 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","labelrank","sovereignt","sov_a3","adm0_dif","level","type","admin","adm0_a3","geou_dif","geounit","gu_a3","su_dif","subunit","su_a3","brk_diff","name","name_long","brk_a3","brk_name","brk_group","abbrev","postal","formal_en","formal_fr","name_ciawf","note_adm0","note_brk","name_sort","name_alt","mapcolor7","mapcolor8","mapcolor9","mapcolor13","pop_est","pop_rank","gdp_md_est","pop_year","lastcensus","gdp_year","economy","income_grp","wikipedia","fips_10_","iso_a2","iso_a3","iso_a3_eh","iso_n3","un_a3","wb_a2","wb_a3","woe_id","woe_id_eh","woe_note","adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb","continent","region_un","subregion","region_wb","name_len","long_len","abbrev_len","tiny","homepart","min_zoom","min_label","max_label","ne_id","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh" FROM ne_50m_admin_0_map_subunits WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_admin_0_map_subunits
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_label","max_label", "min_zoom", "type", "abbrev" FROM ne_50m_admin_0_map_subunits WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# "min_zoom", "type", "abbrev" | have been added to bench sql
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_label, max_label, min_zoom, type, abbrev FROM ne_50m_admin_0_map_subunits WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_admin_0_map_subunits"
-extent = [-180.00000, -89.50139, 180.00000, 83.63410]
-[[tileset.layer]]
-name = "ne_10m_admin_0_map_subunits"
-table_name = "ne_10m_admin_0_map_subunits"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","labelrank","sovereignt","sov_a3","adm0_dif","level","type","admin","adm0_a3","geou_dif","geounit","gu_a3","su_dif","subunit","su_a3","brk_diff","name","name_long","brk_a3","brk_name","brk_group","abbrev","postal","formal_en","formal_fr","name_ciawf","note_adm0","note_brk","name_sort","name_alt","mapcolor7","mapcolor8","mapcolor9","mapcolor13","pop_est","pop_rank","gdp_md_est","pop_year","lastcensus","gdp_year","economy","income_grp","wikipedia","fips_10_","iso_a2","iso_a3","iso_a3_eh","iso_n3","un_a3","wb_a2","wb_a3","woe_id","woe_id_eh","woe_note","adm0_a3_is","adm0_a3_us","adm0_a3_un","adm0_a3_wb","continent","region_un","subregion","region_wb","name_len","long_len","abbrev_len","tiny","homepart","min_zoom","min_label","max_label","ne_id","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh" FROM ne_10m_admin_0_map_subunits WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_0_map_subunits
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_label","max_label", "min_zoom", "type", "abbrev" FROM ne_10m_admin_0_map_subunits WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# "min_zoom", "type", "abbrev" | have been added to bench sql
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_label, max_label, min_zoom, type, abbrev FROM ne_10m_admin_0_map_subunits WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_admin_1_states_provinces_lines"
-extent = [-124.21381, 29.68948, -70.64573, 49.00564]
 [[tileset.layer]]
-name = "ne_110m_admin_1_states_provinces_lines"
-table_name = "ne_110m_admin_1_states_provinces_lines"
+name = "admin_1_lines"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -321,52 +260,29 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","adm0_a3","adm0_name","mapcolor9","mapcolor13","min_zoom" FROM ne_110m_admin_1_states_provinces_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_admin_1_states_provinces_lines
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","adm0_name","min_zoom" FROM ne_110m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_110m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_admin_1_states_provinces_lines"
-extent = [-139.05652, -38.07160, 153.51556, 78.68672]
-[[tileset.layer]]
-name = "ne_50m_admin_1_states_provinces_lines"
-table_name = "ne_50m_admin_1_states_provinces_lines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","adm0_a3","adm0_name","mapcolor9","mapcolor13","scalerank","min_zoom" FROM ne_50m_admin_1_states_provinces_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_admin_1_states_provinces_lines
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","adm0_name","min_zoom" FROM ne_50m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_50m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_admin_1_states_provinces_lines"
-extent = [-178.13709, -49.25087, 178.44862, 81.12853]
-[[tileset.layer]]
-name = "ne_10m_admin_1_states_provinces_lines"
-table_name = "ne_10m_admin_1_states_provinces_lines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","adm0_a3","adm0_name","shape_leng","mapcolor13","mapcolor9","sov_a3","name_l","name_r","name_alt_l","name_alt_r","name_loc_l","name_loc_r","name_len_l","name_len_r","note","type","min_zoom","min_label","scalerank" FROM ne_10m_admin_1_states_provinces_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_admin_1_states_provinces_lines
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","adm0_name","min_zoom","min_label" FROM ne_10m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom, min_label FROM ne_10m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_populated_places"
-extent = [-175.22056, -41.29999, 179.21665, 64.15002]
 [[tileset.layer]]
-name = "ne_110m_populated_places"
-table_name = "ne_110m_populated_places"
+name = "populated_places"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
 srid = 3857
@@ -375,52 +291,28 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","natscale","labelrank","featurecla","name","namepar","namealt","diffascii","nameascii","adm0cap","capin","worldcity","megacity","sov0name","sov_a3","adm0name","adm0_a3","adm1name","iso_a2","note","latitude","longitude","changed","namediff","diffnote","pop_max","pop_min","pop_other","rank_max","rank_min","geonameid","meganame","ls_name","ls_match","checkme","max_pop10","max_pop20","max_pop50","max_pop300","max_pop310","max_natsca","min_areakm","max_areakm","min_areami","max_areami","min_perkm","max_perkm","min_permi","max_permi","min_bbxmin","max_bbxmin","min_bbxmax","max_bbxmax","min_bbymin","max_bbymin","min_bbymax","max_bbymax","mean_bbxc","mean_bbyc","compare","gn_ascii","feature_cl","feature_co","admin1_cod","gn_pop","elevation","gtopo30","timezone","geonamesno","un_fid","un_adm0","un_lat","un_long","pop1950","pop1955","pop1960","pop1965","pop1970","pop1975","pop1980","pop1985","pop1990","pop1995","pop2000","pop2005","pop2010","pop2015","pop2020","pop2025","pop2050","cityalt","min_zoom","wikidataid","wof_id","capalt","name_en","name_de","name_es","name_fr","name_pt","name_ru","name_zh","label","name_ar","name_bn","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_sv","name_tr","name_vi","wdid_score","ne_id" FROM ne_110m_populated_places WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_populated_places
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_110m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_110m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset]]
-name = "ne_50m_populated_places"
-extent = [-175.22056, -90.00000, 179.21665, 78.21668]
-[[tileset.layer]]
-name = "ne_50m_populated_places"
-table_name = "ne_50m_populated_places"
-geometry_field = "wkb_geometry"
-geometry_type = "POINT"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","natscale","labelrank","featurecla","name","namepar","namealt","diffascii","nameascii","adm0cap","capin","worldcity","megacity","sov0name","sov_a3","adm0name","adm0_a3","adm1name","iso_a2","note","latitude","longitude","changed","namediff","diffnote","pop_max","pop_min","pop_other","rank_max","rank_min","geonameid","meganame","ls_name","ls_match","checkme","max_pop10","max_pop20","max_pop50","max_pop300","max_pop310","max_natsca","min_areakm","max_areakm","min_areami","max_areami","min_perkm","max_perkm","min_permi","max_permi","min_bbxmin","max_bbxmin","min_bbxmax","max_bbxmax","min_bbymin","max_bbymin","min_bbymax","max_bbymax","mean_bbxc","mean_bbyc","compare","gn_ascii","feature_cl","feature_co","admin1_cod","gn_pop","elevation","gtopo30","timezone","geonamesno","un_fid","un_adm0","un_lat","un_long","pop1950","pop1955","pop1960","pop1965","pop1970","pop1975","pop1980","pop1985","pop1990","pop1995","pop2000","pop2005","pop2010","pop2015","pop2020","pop2025","pop2050","cityalt","min_zoom","wikidataid","wof_id","capalt","name_en","name_de","name_es","name_fr","name_pt","name_ru","name_zh","label","name_ar","name_bn","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_sv","name_tr","name_vi","wdid_score","ne_id" FROM ne_50m_populated_places WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_populated_places
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_50m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_populated_places"
-extent = [-179.58998, -90.00000, 179.38330, 82.48332]
-[[tileset.layer]]
-name = "ne_10m_populated_places"
-table_name = "ne_10m_populated_places"
-geometry_field = "wkb_geometry"
-geometry_type = "POINT"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","natscale","labelrank","featurecla","name","namepar","namealt","diffascii","nameascii","adm0cap","capin","worldcity","megacity","sov0name","sov_a3","adm0name","adm0_a3","adm1name","iso_a2","note","latitude","longitude","changed","namediff","diffnote","pop_max","pop_min","pop_other","rank_max","rank_min","geonameid","meganame","ls_name","ls_match","checkme","max_pop10","max_pop20","max_pop50","max_pop300","max_pop310","max_natsca","min_areakm","max_areakm","min_areami","max_areami","min_perkm","max_perkm","min_permi","max_permi","min_bbxmin","max_bbxmin","min_bbxmax","max_bbxmax","min_bbymin","max_bbymin","min_bbymax","max_bbymax","mean_bbxc","mean_bbyc","compare","gn_ascii","feature_cl","feature_co","admin1_cod","gn_pop","elevation","gtopo30","timezone","geonamesno","un_fid","un_adm0","un_lat","un_long","pop1950","pop1955","pop1960","pop1965","pop1970","pop1975","pop1980","pop1985","pop1990","pop1995","pop2000","pop2005","pop2010","pop2015","pop2020","pop2025","pop2050","cityalt","min_zoom","wikidataid","wof_id","capalt","name_en","name_de","name_es","name_fr","name_pt","name_ru","name_zh","label","name_ar","name_bn","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_sv","name_tr","name_vi","wdid_score","ne_id" FROM ne_10m_populated_places WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_populated_places
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_10m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_roads"
-extent = [-166.53249, -55.11212, 178.41908, 71.17768]
 [[tileset.layer]]
-name = "ne_10m_roads"
-table_name = "ne_10m_roads"
+name = "roads"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -429,16 +321,16 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","type","sov_a3","note","edited","name","namealt","namealtt","routeraw","question","length_km","toll","ne_part","label","label2","local","localtype","localalt","labelrank","ignore","add","rwdb_rd_id","orig_fid","prefix","uident","continent","expressway","level","min_zoom","min_label" FROM ne_10m_roads WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_roads
+min_zoom = 3
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","name","min_zoom","min_label","type", "label", "label2", "featurecla" FROM ne_10m_roads WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# type, label, label2, featurecla | were added to bench sql
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_zoom, min_label, type, label, label2, featurecla FROM ne_10m_roads WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_urban_areas"
-extent = [-157.99118, -51.05304, 178.03383, 69.76986]
 [[tileset.layer]]
-name = "ne_10m_urban_areas"
-table_name = "ne_10m_urban_areas"
+name = "urban_areas"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -447,16 +339,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","area_sqkm","min_zoom" FROM ne_10m_urban_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_urban_areas
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","min_zoom" FROM ne_10m_urban_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_urban_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_geographic_lines"
-extent = [-180.00000, -90.00000, 180.00000, 90.00000]
 [[tileset.layer]]
-name = "ne_50m_geographic_lines"
-table_name = "ne_50m_geographic_lines"
+name = "geographic_lines"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -465,34 +356,22 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","name","name_long","abbrev","note","featurecla","min_zoom","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_geographic_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_geographic_lines
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","name" FROM ne_50m_geographic_lines WHERE wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name FROM ne_50m_geographic_lines WHERE wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_geographic_lines"
-extent = [-180.00000, -90.00000, 180.00000, 90.00000]
-[[tileset.layer]]
-name = "ne_10m_geographic_lines"
-table_name = "ne_10m_geographic_lines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","name","name_long","abbrev","note","featurecla","min_zoom","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_geographic_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_geographic_lines
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","name" FROM ne_10m_geographic_lines WHERE wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name FROM ne_10m_geographic_lines WHERE wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_coastline"
-extent = [-180.00000, -85.60904, 180.00000, 83.64513]
 [[tileset.layer]]
-name = "ne_110m_coastline"
-table_name = "ne_110m_coastline"
+name = "coastline"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -501,53 +380,29 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_110m_coastline WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_coastline
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_110m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zooom FROM ne_110m_coastline WHERE min_zooom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_coastline"
-extent = [-180.00000, -85.19219, 180.00000, 83.59961]
-[[tileset.layer]]
-name = "ne_50m_coastline"
-table_name = "ne_50m_coastline"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_50m_coastline WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_coastline
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_50m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_coastline WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_coastline"
-extent = [-180.00000, -85.22194, 180.00000, 83.63410]
-[[tileset.layer]]
-name = "ne_10m_coastline"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
 [[tileset.layer.query]]
-minzoom = 5
-maxzoom = 10
-sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_10m_coastline WHERE wkb_geometry && !bbox!"""
+# ne_10m_coastline
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_coastline WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_antarctic_ice_shelves_lines"
-extent = [-180.00000, -78.61096, 179.99995, -64.76793]
 [[tileset.layer]]
-name = "ne_50m_antarctic_ice_shelves_lines"
-table_name = "ne_50m_antarctic_ice_shelves_lines"
+name = "antarctic_ice_shelves_lines"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -556,34 +411,22 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_50m_antarctic_ice_shelves_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_antarctic_ice_shelves_lines
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","min_zoom" FROM ne_50m_antarctic_ice_shelves_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_antarctic_ice_shelves_lines"
-extent = [-180.00000, -83.22691, 180.00000, -64.57068]
-[[tileset.layer]]
-name = "ne_10m_antarctic_ice_shelves_lines"
-table_name = "ne_10m_antarctic_ice_shelves_lines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_10m_antarctic_ice_shelves_lines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_antarctic_ice_shelves_lines
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","min_zoom" FROM ne_10m_antarctic_ice_shelves_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_antarctic_ice_shelves_polys"
-extent = [-180.00000, -85.19216, 179.99995, -64.76793]
 [[tileset.layer]]
-name = "ne_50m_antarctic_ice_shelves_polys"
-table_name = "ne_50m_antarctic_ice_shelves_polys"
+name = "antarctic_ice_shelves_polys"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -592,34 +435,22 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_50m_antarctic_ice_shelves_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_antarctic_ice_shelves_polys
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","min_zoom" FROM ne_50m_antarctic_ice_shelves_polys WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_polys WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_antarctic_ice_shelves_polys"
-extent = [-179.99999, -85.22210, 180.00000, -64.52484]
-[[tileset.layer]]
-name = "ne_10m_antarctic_ice_shelves_polys"
-table_name = "ne_10m_antarctic_ice_shelves_polys"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","recnum","featurecla","name","scalerank","min_zoom" FROM ne_10m_antarctic_ice_shelves_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_antarctic_ice_shelves_polys
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","min_zoom" FROM ne_10m_antarctic_ice_shelves_polys WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_polys WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_geography_marine_polys"
-extent = [-180.00000, -85.19206, 179.99990, 83.59939]
 [[tileset.layer]]
-name = "ne_110m_geography_marine_polys"
-table_name = "ne_110m_geography_marine_polys"
+name = "marine_polys"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -628,53 +459,29 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","changed","note","name_fr","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_110m_geography_marine_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_geography_marine_polys
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","name","min_label","max_label" FROM ne_110m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_110m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_geography_marine_polys"
-extent = [-180.00000, -85.19206, 179.99990, 83.59939]
-[[tileset.layer]]
-name = "ne_50m_geography_marine_polys"
-table_name = "ne_50m_geography_marine_polys"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","changed","note","name_fr","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_geography_marine_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_geography_marine_polys
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","name","min_label","max_label" FROM ne_50m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_50m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_geography_marine_polys"
-extent = [-180.00000, -85.19206, 179.99990, 83.59939]
-[[tileset.layer]]
-name = "ne_10m_geography_marine_polys"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
 [[tileset.layer.query]]
-minzoom = 5
-maxzoom = 10
-sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","changed","note","name_fr","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_geography_marine_polys WHERE wkb_geometry && !bbox!"""
+# ne_10m_geography_marine_polys
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","name","min_label","max_label" FROM ne_10m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_10m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_geography_regions_elevation_points"
-extent = [-167.55467, -85.34762, 160.64394, 69.28107]
 [[tileset.layer]]
-name = "ne_50m_geography_regions_elevation_points"
-table_name = "ne_50m_geography_regions_elevation_points"
+name = "elevation_points"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
 srid = 3857
@@ -683,34 +490,22 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","elevation","comment","name_alt","lat_y","long_x","nation1","nation2","note","region","subregion","min_zoom","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_geography_regions_elevation_points WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_geography_regions_elevation_points
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","elevation","min_zoom" FROM ne_50m_geography_regions_elevation_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_50m_geography_regions_elevation_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_geography_regions_elevation_points"
-extent = [-178.15520, -85.71002, 179.20362, 83.32740]
-[[tileset.layer]]
-name = "ne_10m_geography_regions_elevation_points"
-table_name = "ne_10m_geography_regions_elevation_points"
-geometry_field = "wkb_geometry"
-geometry_type = "POINT"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","elevation","comment","name_alt","lat_y","long_x","nation1","nation2","note","region","subregion","min_zoom","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_geography_regions_elevation_points WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_geography_regions_elevation_points
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","elevation","min_zoom" FROM ne_10m_geography_regions_elevation_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_10m_geography_regions_elevation_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_geography_regions_points"
-extent = [-178.31920, -78.63812, 179.49757, 83.62629]
 [[tileset.layer]]
-name = "ne_10m_geography_regions_points"
-table_name = "ne_10m_geography_regions_points"
+name = "geography_regions_points"
 geometry_field = "wkb_geometry"
 geometry_type = "POINT"
 srid = 3857
@@ -719,16 +514,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","comment","name_alt","lat_y","long_x","region","subregion","min_zoom","label","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wikidataid","wdid_score","ne_id" FROM ne_10m_geography_regions_points WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_geography_regions_points
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom" FROM ne_10m_geography_regions_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_geography_regions_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_geography_regions_polys"
-extent = [-180.00000, -89.99993, 180.00000, 84.13416]
 [[tileset.layer]]
-name = "ne_110m_geography_regions_polys"
-table_name = "ne_110m_geography_regions_polys"
+name = "geography_regions_polys"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -737,53 +531,29 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","region","subregion","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_110m_geography_regions_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_geography_regions_polys
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","max_label" FROM ne_110m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_110m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_geography_regions_polys"
-extent = [-180.00000, -89.99993, 180.00000, 84.13416]
-[[tileset.layer]]
-name = "ne_50m_geography_regions_polys"
-table_name = "ne_50m_geography_regions_polys"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","region","subregion","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_geography_regions_polys WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_geography_regions_polys
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","max_label" FROM ne_50m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_50m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_geography_regions_polys"
-extent = [-180.00000, -89.99993, 180.00000, 84.13416]
-[[tileset.layer]]
-name = "ne_10m_geography_regions_polys"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
 [[tileset.layer.query]]
-minzoom = 5
-maxzoom = 10
-sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","namealt","region","subregion","min_label","max_label","scalerank","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_geography_regions_polys WHERE wkb_geometry && !bbox!"""
+# ne_10m_geography_regions_polys
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","max_label" FROM ne_10m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_10m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_rivers_lake_centerlines_scale_rank"
-extent = [-165.24394, -50.24014, 176.32581, 73.33490]
 [[tileset.layer]]
-name = "ne_50m_rivers_lake_centerlines_scale_rank"
-table_name = "ne_50m_rivers_lake_centerlines_scale_rank"
+name = "rivers_lake_centerlines_scale_rank"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -792,34 +562,23 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","dissolve","note","min_zoom","strokeweig","name_alt","name_en","min_label","ne_id","label","wikidataid","name_ar","name_bn","name_de","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score" FROM ne_50m_rivers_lake_centerlines_scale_rank WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_rivers_lake_centerlines_scale_rank
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","min_zoom", "strokeweig" FROM ne_50m_rivers_lake_centerlines_scale_rank WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+# "min_zoom", "strokeweig" | were added to bench sql
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_50m_rivers_lake_centerlines_scale_rank WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_rivers_lake_centerlines_scale_rank"
-extent = [-164.90349, -52.15775, 177.52036, 75.79348]
-[[tileset.layer]]
-name = "ne_10m_rivers_lake_centerlines_scale_rank"
-table_name = "ne_10m_rivers_lake_centerlines_scale_rank"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","rivernum","dissolve","name","name_alt","note","min_zoom","strokeweig","name_en","min_label","ne_id","label","wikidataid","name_ar","name_bn","name_de","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score" FROM ne_10m_rivers_lake_centerlines_scale_rank WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_rivers_lake_centerlines_scale_rank
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","min_zoom", "strokeweig" FROM ne_10m_rivers_lake_centerlines_scale_rank WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_lake_centerlines_scale_rank WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_rivers_north_america"
-extent = [-166.31509, 9.14513, -27.26236, 82.63968]
 [[tileset.layer]]
-name = "ne_10m_rivers_north_america"
-table_name = "ne_10m_rivers_north_america"
+name = "rivers_north_america"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -828,16 +587,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","rivernum","dissolve","name","name_alt","note","name_full","min_zoom","strokeweig","uident","min_label","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_rivers_north_america WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_rivers_north_america
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label", "min_zoom", "strokeweig" FROM ne_10m_rivers_north_america WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_north_america WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_rivers_europe"
-extent = [-21.51089, 27.31338, 65.84889, 70.09317]
 [[tileset.layer]]
-name = "ne_10m_rivers_europe"
-table_name = "ne_10m_rivers_europe"
+name = "rivers_europe"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -846,16 +604,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","id","wso_id","objectid","featurecla","scalerank","rivernum","dissolve","name","min_zoom","strokeweig","name_alt","min_label","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_rivers_europe WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_rivers_europe
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label", "min_zoom", "strokeweig" FROM ne_10m_rivers_europe WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_europe WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_rivers_lake_centerlines"
-extent = [-135.31341, -33.99358, 129.95603, 72.90651]
 [[tileset.layer]]
-name = "ne_110m_rivers_lake_centerlines"
-table_name = "ne_110m_rivers_lake_centerlines"
+name = "rivers_lake_centerlines"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -864,52 +621,29 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","name_alt","min_zoom","name_en","min_label","wikidataid","label","name_ar","name_bn","name_de","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_110m_rivers_lake_centerlines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_rivers_lake_centerlines
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label","min_zoom" FROM ne_110m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_110m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_rivers_lake_centerlines"
-extent = [-165.24394, -50.24014, 176.32581, 73.33490]
-[[tileset.layer]]
-name = "ne_50m_rivers_lake_centerlines"
-table_name = "ne_50m_rivers_lake_centerlines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","note","min_zoom","name_alt","min_label","name_en","label","wikidataid","name_ar","name_bn","name_de","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_rivers_lake_centerlines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_rivers_lake_centerlines
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label", "min_zoom" FROM ne_50m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_50m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_rivers_lake_centerlines"
-extent = [-164.90347, -52.15773, 177.52036, 75.79348]
-[[tileset.layer]]
-name = "ne_10m_rivers_lake_centerlines"
-table_name = "ne_10m_rivers_lake_centerlines"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTILINESTRING"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 0
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","dissolve","scalerank","featurecla","name","name_alt","rivernum","note","min_zoom","name_en","min_label","label","wikidataid","name_ar","name_bn","name_de","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_rivers_lake_centerlines WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_rivers_lake_centerlines
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_label" FROM ne_10m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_10m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_lakes_historic"
-extent = [-99.19328, 12.45091, 61.93921, 46.86591]
 [[tileset.layer]]
-name = "ne_10m_lakes_historic"
-table_name = "ne_10m_lakes_historic"
+name = "lakes_historic"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -918,16 +652,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","name_alt","date","min_zoom","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_lakes_historic WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_lakes_historic
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_lakes_historic WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_lakes_historic WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_lakes"
-extent = [-124.95363, -16.53641, 109.92981, 66.96930]
 [[tileset.layer]]
-name = "ne_110m_lakes"
-table_name = "ne_110m_lakes"
+name = "lakes"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -936,52 +669,29 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","name_alt","admin","min_zoom","min_label","name_abb","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_110m_lakes WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_lakes
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom","min_label" FROM ne_110m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_110m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_lakes"
-extent = [-165.89849, -50.62002, 176.08271, 81.94033]
-[[tileset.layer]]
-name = "ne_50m_lakes"
-table_name = "ne_50m_lakes"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","name_alt","note","admin","namepar","min_zoom","min_label","name_abb","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_50m_lakes WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_lakes
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom","min_label" FROM ne_50m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_50m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_lakes"
-extent = [-165.96558, -50.66967, 177.15438, 81.95521]
-[[tileset.layer]]
-name = "ne_10m_lakes"
-table_name = "ne_10m_lakes"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","name","name_abb","name_alt","note","delta","dam_name","year","admin","min_zoom","min_label","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_lakes WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_lakes
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom","min_label" FROM ne_10m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_lakes_north_america"
-extent = [-164.28411, 8.98835, -18.57000, 82.29249]
 [[tileset.layer]]
-name = "ne_10m_lakes_north_america"
-table_name = "ne_10m_lakes_north_america"
+name = "lakes_north_america"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -990,16 +700,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","uident","featurecla","name","name_alt","note","scalerank","min_zoom","min_label","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_lakes_north_america WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_lakes_north_america
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom","min_label" FROM ne_10m_lakes_north_america WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_north_america WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_lakes_europe"
-extent = [-9.59710, 30.52808, 60.19093, 69.51728]
 [[tileset.layer]]
-name = "ne_10m_lakes_europe"
-table_name = "ne_10m_lakes_europe"
+name = "lakes_europe"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -1008,16 +717,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","id","name","lge_id","pfafstette","lke_type","altitude","objectid","scalerank","featurecla","note","funkyname","min_zoom","min_label","label","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_lakes_europe WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_lakes_europe
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","name","min_zoom","min_label" FROM ne_10m_lakes_europe WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_europe WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_reefs"
-extent = [-180.00000, -29.98406, 180.00000, 28.44519]
 [[tileset.layer]]
-name = "ne_10m_reefs"
-table_name = "ne_10m_reefs"
+name = "reefs"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTILINESTRING"
 srid = 3857
@@ -1026,16 +734,15 @@ srid = 3857
 buffer_size = 0
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_10m_reefs WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_reefs
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_reefs WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_reefs WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_playas"
-extent = [-118.83597, -30.35118, 119.93734, 54.05008]
 [[tileset.layer]]
-name = "ne_10m_playas"
-table_name = "ne_10m_playas"
+name = "playas"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -1044,16 +751,15 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","name","name_abb","name_alt","note","min_zoom","wikidataid","name_ar","name_bn","name_de","name_en","name_es","name_fr","name_el","name_hi","name_hu","name_id","name_it","name_ja","name_ko","name_nl","name_pl","name_pt","name_ru","name_sv","name_tr","name_vi","name_zh","wdid_score","ne_id" FROM ne_10m_playas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_playas
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom","name" FROM ne_10m_playas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom, name FROM ne_10m_playas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_glaciated_areas"
-extent = [-180.00000, -89.99890, 179.99995, 83.36507]
 [[tileset.layer]]
-name = "ne_110m_glaciated_areas"
-table_name = "ne_110m_glaciated_areas"
+name = "glaciated_areas"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -1062,52 +768,29 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_110m_glaciated_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_glaciated_areas
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_110m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_glaciated_areas"
-extent = [-180.00000, -89.99890, 179.99998, 83.55867]
-[[tileset.layer]]
-name = "ne_50m_glaciated_areas"
-table_name = "ne_50m_glaciated_areas"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_50m_glaciated_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_glaciated_areas
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_50m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_glaciated_areas"
-extent = [-179.99999, -89.99993, 180.00000, 83.55756]
-[[tileset.layer]]
-name = "ne_10m_glaciated_areas"
-table_name = "ne_10m_glaciated_areas"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","recnum","scalerank","featurecla","name","min_zoom" FROM ne_10m_glaciated_areas WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_10m_glaciated_areas
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_110m_land"
-extent = [-180.00000, -85.60904, 180.00000, 83.64513]
 [[tileset.layer]]
-name = "ne_110m_land"
-table_name = "ne_110m_land"
+name = "land"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -1116,106 +799,29 @@ srid = 3857
 buffer_size = 1
 simplify = true
 query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_110m_land WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_110m_land
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_110m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_50m_land"
-extent = [-180.00000, -89.99893, 180.00000, 83.59961]
-[[tileset.layer]]
-name = "ne_50m_land"
-table_name = "ne_50m_land"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_50m_land WHERE wkb_geometry && !bbox!"""
+[[tileset.layer.query]]
+# ne_50m_land
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_50m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_land"
-extent = [-180.00000, -89.50139, 180.00000, 83.63410]
-[[tileset.layer]]
-name = "ne_10m_land"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
 [[tileset.layer.query]]
-minzoom = 5
-maxzoom = 10
-sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_10m_land WHERE wkb_geometry && !bbox!"""
+# ne_10m_land
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
-[[tileset]]
-name = "ne_10m_minor_islands"
-extent = [-179.95763, -76.12184, 179.50465, 81.34483]
 [[tileset.layer]]
-name = "ne_10m_minor_islands"
-table_name = "ne_10m_minor_islands"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom","scalerank" FROM ne_10m_minor_islands WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_minor_islands WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset]]
-name = "ne_110m_ocean"
-extent = [-180.00000, -85.60904, 180.00000, 84.37500]
-[[tileset.layer]]
-name = "ne_110m_ocean"
-table_name = "ne_110m_ocean"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_110m_ocean WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset]]
-name = "ne_50m_ocean"
-extent = [-180.00000, -85.19219, 180.00000, 89.29795]
-[[tileset.layer]]
-name = "ne_50m_ocean"
-table_name = "ne_50m_ocean"
-geometry_field = "wkb_geometry"
-geometry_type = "MULTIPOLYGON"
-srid = 3857
-#fid_field = "id"
-#tile_size = "4096"
-buffer_size = 1
-simplify = true
-query_limit = 1000
-#[[tileset.layer.query]]
-#sql = """SELECT wkb_geometry,"ogc_fid","scalerank","featurecla","min_zoom" FROM ne_50m_ocean WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset]]
-name = "ne_10m_ocean"
-extent = [-180.00000, -85.22194, 180.00000, 89.50139]
-[[tileset.layer]]
-name = "ne_10m_ocean"
+name = "minor_islands"
 geometry_field = "wkb_geometry"
 geometry_type = "MULTIPOLYGON"
 srid = 3857
@@ -1225,9 +831,41 @@ buffer_size = 1
 simplify = true
 query_limit = 1000
 [[tileset.layer.query]]
-minzoom = 5
-maxzoom = 10
-sql = """SELECT wkb_geometry,"ogc_fid","featurecla","scalerank","min_zoom" FROM ne_10m_ocean WHERE wkb_geometry && !bbox!"""
+# ne_10m_minor_islands
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_minor_islands WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_minor_islands WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
+
+[[tileset.layer]]
+name = "ocean"
+geometry_field = "wkb_geometry"
+geometry_type = "MULTIPOLYGON"
+srid = 3857
+#fid_field = "id"
+#tile_size = "4096"
+buffer_size = 1
+simplify = true
+query_limit = 1000
+[[tileset.layer.query]]
+# ne_110m_ocean
+min_zoom = 0
+max_zoom = 2
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_110m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
+
+[[tileset.layer.query]]
+# ne_50m_ocean
+min_zoom = 3
+max_zoom = 4
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_50m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
+
+[[tileset.layer.query]]
+# ne_10m_ocean
+min_zoom = 5
+max_zoom = 10
+sql = """SELECT wkb_geometry,"ogc_fid","featurecla","min_zoom" FROM ne_10m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [cache.file]

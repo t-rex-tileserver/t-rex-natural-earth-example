@@ -15,7 +15,7 @@ seed_region_4: $(result_csv)
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=3 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008'
 
 $(result_csv):
-	echo software,test_name,time_started,real,user,sys >$@
+	echo time_started,software,test_name,real,user,sys >$@
 
 http:
 	# 1 connection

@@ -2,17 +2,20 @@ sw = t-rex
 result_csv = results_seed.csv
 ts = $(shell date '+%Y-%m-%dT%TZ')
 
-seed_world:
+seed_world: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=-180,-90,180,90
 
-seed_region:
+seed_region: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008
 
-seed_region_4:
+seed_region_4: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) sh -c 't_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=0 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=1 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=2 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=3 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008'
+
+$(result_csv):
+	echo software,test_name,time_started,real,user,sys >$@
 
 http:
 	# 1 connection
@@ -28,6 +31,3 @@ stats:
 
 clean:
 	rm -rf /tmp/mvtcache
-
-clean_csv:
-	echo software,test_name,time_started,real,user,sys >$(result_csv)

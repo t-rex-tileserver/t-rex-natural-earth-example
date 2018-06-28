@@ -16,9 +16,6 @@ name = "ne"
 attribution = "Natural Earth v4"
 extent = [-179.97277, -83.05457, 179.99366, 83.23559]
 
-# [[tileset]]
-# name = "ne_10m_admin_0_label_points"
-# extent = [-179.97277, -83.05457, 179.99366, 83.23559]
 [[tileset.layer]]
 name = "country_label_points"
 geometry_field = "wkb_geometry"
@@ -32,9 +29,6 @@ minzoom = 1
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, sr_subunit, scalerank FROM ne_10m_admin_0_label_points WHERE scalerank < !zoom! AND wkb_geometry && !bbox!"""
 
-# [[tileset]]
-# name = "state_label_points"
-# extent = [-179.96927, -83.03840, 179.99184, 83.22710]
 [[tileset.layer]]
 name = "state_label_points"
 geometry_field = "wkb_geometry"
@@ -48,9 +42,6 @@ minzoom = 1
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, adm0_sr, name, scalerank FROM ne_10m_admin_1_label_points WHERE scalerank < !zoom! AND wkb_geometry && !bbox!"""
 
-# [[tileset]]
-# name = "boundary_lines_land"
-# extent = [-140.99778, -54.89681, 141.03385, 70.16419]
 [[tileset.layer]]
 name = "boundary_lines_land"
 geometry_field = "wkb_geometry"
@@ -89,13 +80,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_admin_0_boundary_lines_disputed_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 [[tileset.layer.query]]
 # ne_10m_admin_0_boundary_lines_disputed_areas
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_admin_0_boundary_lines_disputed_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "parks_and_protected_lands_area"
@@ -110,7 +99,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_area WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_area WHERE wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "parks_and_protected_lands_line"
@@ -125,7 +113,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_line WHERE wkb_geometry && !bbox!"""
-#     sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_line WHERE wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "parks_and_protected_lands_point"
@@ -139,7 +126,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_point WHERE wkb_geometry && !bbox!"""
-#     sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name FROM ne_10m_parks_and_protected_lands_point WHERE wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "map_units"
@@ -154,7 +140,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_map_units WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_map_units WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "boundary_lines_maritime"
@@ -169,14 +154,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_admin_0_boundary_lines_maritime_indicator
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_admin_0_boundary_lines_maritime_indicator WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "countries"
@@ -193,7 +175,6 @@ maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3_un AS adm0_a3, min_zoom, min_label, max_label FROM ne_110m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 # ? "adm0_a3_is, adm0_a3_us, adm0_a3_un, adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_110m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_admin_0_countries
 minzoom = 3
@@ -201,7 +182,6 @@ maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3_un AS adm0_a3, min_zoom, min_label, max_label FROM ne_50m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 # ? "adm0_a3_is, adm0_a3_us, adm0_a3_un, adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_50m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_admin_0_countries
 minzoom = 5
@@ -225,7 +205,6 @@ maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_label, max_label, min_zoom, type, abbrev FROM ne_50m_admin_0_map_subunits WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 # "min_zoom, type, abbrev" | have been added to bench sql
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_label, max_label, min_zoom, type, abbrev FROM ne_50m_admin_0_map_subunits WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_admin_0_map_subunits
 minzoom = 5
@@ -247,21 +226,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_110m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_110m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_admin_1_states_provinces_lines
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_50m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom FROM ne_50m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_admin_1_states_provinces_lines
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, adm0_name, min_zoom, min_label FROM ne_10m_admin_1_states_provinces_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, adm0_name, min_zoom, min_label FROM ne_10m_admin_1_states_provinces_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "populated_places"
@@ -276,20 +250,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_110m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_110m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 [[tileset.layer.query]]
 # ne_50m_populated_places
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_50m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_populated_places
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_populated_places WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_populated_places WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "roads"
@@ -320,7 +290,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, min_zoom FROM ne_10m_urban_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_urban_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "geographic_lines"
@@ -335,14 +304,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, name FROM ne_50m_geographic_lines WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name FROM ne_50m_geographic_lines WHERE wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_geographic_lines
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, name FROM ne_10m_geographic_lines WHERE wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name FROM ne_10m_geographic_lines WHERE wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "coastline"
@@ -357,21 +323,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zooom FROM ne_110m_coastline WHERE min_zooom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_coastline
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_coastline WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_coastline
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_coastline WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_coastline WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "antarctic_ice_shelves_lines"
@@ -386,14 +347,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_antarctic_ice_shelves_lines
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_lines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_lines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "antarctic_ice_shelves_polys"
@@ -408,14 +366,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_polys WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_50m_antarctic_ice_shelves_polys WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_antarctic_ice_shelves_polys
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_polys WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, min_zoom FROM ne_10m_antarctic_ice_shelves_polys WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "marine_polys"
@@ -430,21 +385,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, name, min_label, max_label FROM ne_110m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_110m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_geography_marine_polys
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, name, min_label, max_label FROM ne_50m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_50m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_geography_marine_polys
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, name, min_label, max_label FROM ne_10m_geography_marine_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, name, min_label, max_label FROM ne_10m_geography_marine_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "elevation_points"
@@ -459,14 +409,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_50m_geography_regions_elevation_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_50m_geography_regions_elevation_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_geography_regions_elevation_points
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_10m_geography_regions_elevation_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, elevation, min_zoom FROM ne_10m_geography_regions_elevation_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "geography_regions_points"
@@ -481,7 +428,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_geography_regions_points WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom FROM ne_10m_geography_regions_points WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "geography_regions_polys"
@@ -496,21 +442,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_110m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_110m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_geography_regions_polys
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_50m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_50m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_geography_regions_polys
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_10m_geography_regions_polys WHERE min_label::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, max_label FROM ne_10m_geography_regions_polys WHERE min_label <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "rivers_lake_centerlines_scale_rank"
@@ -525,16 +466,11 @@ query_limit = 1000
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_50m_rivers_lake_centerlines_scale_rank WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-# "min_zoom, strokeweig" | were added to bench sql
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_50m_rivers_lake_centerlines_scale_rank WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_rivers_lake_centerlines_scale_rank
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_lake_centerlines_scale_rank WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_lake_centerlines_scale_rank WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer]]
 name = "rivers_north_america"
 geometry_field = "wkb_geometry"
@@ -548,7 +484,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_north_america WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_north_america WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "rivers_europe"
@@ -563,7 +498,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_europe WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom, strokeweig FROM ne_10m_rivers_europe WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "rivers_lake_centerlines"
@@ -578,21 +512,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_110m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_110m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_rivers_lake_centerlines
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_50m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_50m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_rivers_lake_centerlines
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_label FROM ne_10m_rivers_lake_centerlines WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_label, min_zoom FROM ne_10m_rivers_lake_centerlines WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "lakes_historic"
@@ -607,7 +536,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_lakes_historic WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_lakes_historic WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "lakes"
@@ -622,21 +550,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_110m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_110m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_lakes
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_50m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_50m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_lakes
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "lakes_north_america"
@@ -651,7 +574,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_north_america WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_north_america WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "lakes_europe"
@@ -666,7 +588,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_europe WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, min_zoom, min_label FROM ne_10m_lakes_europe WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "reefs"
@@ -681,7 +602,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_reefs WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_reefs WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "playas"
@@ -696,7 +616,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom, name FROM ne_10m_playas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom, name FROM ne_10m_playas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "glaciated_areas"
@@ -711,21 +630,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_glaciated_areas
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_glaciated_areas
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_glaciated_areas WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_glaciated_areas WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "land"
@@ -740,21 +654,16 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_land
 minzoom = 3
 maxzoom = 4
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_10m_land
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "minor_islands"
@@ -769,7 +678,6 @@ query_limit = 1000
 minzoom = 5
 maxzoom = 10
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_minor_islands WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_minor_islands WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 
 [[tileset.layer]]
 name = "ocean"
@@ -784,21 +692,18 @@ query_limit = 1000
 minzoom = 0
 maxzoom = 2
 sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
 [[tileset.layer.query]]
 # ne_50m_ocean
 minzoom = 3
-maxzoom = 4
-sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
-
-[[tileset.layer.query]]
-# ne_10m_ocean
-minzoom = 5
 maxzoom = 10
-sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-    # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
+# NOTICE: skip big ne_10m_ocean geometry!
+#maxzoom = 4
+sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+#[[tileset.layer.query]]
+## ne_10m_ocean
+#minzoom = 5
+#maxzoom = 10
+#sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 
 [cache.file]
 base = "/tmp/mvtcache"
@@ -808,5 +713,8 @@ baseurl = "http://example.com/tiles"
 # Bind address. Use 0.0.0.0 to listen on all adresses.
 bind = "127.0.0.1"
 port = 6767
-threads = 4
 #cache_control_max_age = 43200
+
+[[webserver.static]]
+path = "/map"
+dir = "./map/"

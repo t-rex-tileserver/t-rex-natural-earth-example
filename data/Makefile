@@ -102,3 +102,12 @@ POINT_LAYERS = ne_10m_admin_0_label_points \
 import: packages/natural_earth_vector.sqlite
 	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 -nlt PROMOTE_TO_MULTI $< $(LAYERS)
 	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 $< $(POINT_LAYERS)
+
+optimize:
+	psql $(DBNAME) -c "CREATE TABLE ne_10m_land_subdivided AS SELECT ST_Subdivide(wkb_geometry) AS wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land"
+	psql $(DBNAME) --quiet -c "CREATE INDEX ON ne_10m_land_subdivided USING gist(wkb_geometry)"
+	psql $(DBNAME) -c "CREATE TABLE ne_50m_ocean_subdivided AS SELECT ST_Subdivide(wkb_geometry) AS wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean"
+	psql $(DBNAME) --quiet -c "CREATE INDEX ON ne_50m_ocean_subdivided USING gist(wkb_geometry)"
+	psql $(DBNAME) -c "CREATE TABLE ne_10m_ocean_subdivided AS SELECT ST_Subdivide(wkb_geometry) AS wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean"
+	psql $(DBNAME) --quiet -c "CREATE INDEX ON ne_10m_ocean_subdivided USING gist(wkb_geometry)"
+	psql $(DBNAME)  -c "VACUUM ANALYZE"

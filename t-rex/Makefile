@@ -1,18 +1,19 @@
 sw = t-rex
 result_csv = results_seed.csv
 ts = $(shell date '+%Y-%m-%dT%TZ')
+region_bbox = 8.415527,45.174293,12.711182,47.428087
 
 seed_world: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=-180,-90,180,90
 
 seed_region: $(result_csv)
-	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008
+	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=$(region_bbox)
 
 seed_region_4: $(result_csv)
-	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) sh -c 't_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=0 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
-	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=1 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
-	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=2 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008 & \
-	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=3 --tileset=ne --extent=5.361328,45.336702,30.058594,58.950008'
+	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) sh -c 't_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=0 --tileset=ne --extent=$(region_bbox) & \
+	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=1 --tileset=ne --extent=$(region_bbox) & \
+	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=2 --tileset=ne --extent=$(region_bbox) & \
+	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=3 --tileset=ne --extent=$(region_bbox)'
 
 $(result_csv):
 	echo time_started,software,test_name,real,user,sys >$@

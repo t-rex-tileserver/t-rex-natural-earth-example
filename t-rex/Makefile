@@ -5,15 +5,18 @@ region_bbox = 8.415527,45.174293,12.711182,47.428087
 
 seed_world: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=-180,-90,180,90
+	@echo Statistics written to $(result_csv)
 
 seed_region: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=$(region_bbox)
+	@echo Statistics written to $(result_csv)
 
 seed_region_4: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) sh -c 't_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=0 --tileset=ne --extent=$(region_bbox) & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=1 --tileset=ne --extent=$(region_bbox) & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=2 --tileset=ne --extent=$(region_bbox) & \
 	t_rex generate --config mvtbench.toml --maxzoom=10 --progress=false --nodes=4 --nodeno=3 --tileset=ne --extent=$(region_bbox)'
+	@echo Statistics written to $(result_csv)
 
 $(result_csv):
 	echo time_started,software,test_name,real,user,sys >$@

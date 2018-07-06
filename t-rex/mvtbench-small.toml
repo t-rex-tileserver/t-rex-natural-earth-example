@@ -28,7 +28,7 @@ query_limit = 1000
 # ne_10m_admin_0_countries
 minzoom = 0
 maxzoom = 6
-sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3_un AS adm0_a3, min_zoom, min_label, max_label FROM ne_10m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
+sql = """SELECT wkb_geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_10m_admin_0_countries WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
 # ? "adm0_a3_is, adm0_a3_us, adm0_a3_un, adm0_a3_wb"
     # sql = "SELECT ST_AsBinary(wkb_geometry) AS geometry, ogc_fid, featurecla, name, name_long, abbrev, adm0_a3, min_zoom, min_label, max_label FROM ne_10m_admin_0_countries WHERE min_zoom <= !ZOOM! AND wkb_geometry && !BBOX!"
 

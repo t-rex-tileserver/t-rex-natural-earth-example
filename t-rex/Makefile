@@ -1,7 +1,7 @@
 sw = t-rex
 result_csv = results_seed.csv
 ts = $(shell date '+%Y-%m-%dT%TZ')
-region_bbox = 8.415527,45.174293,12.711182,47.428087
+region_bbox = 5.361328,45.336702,30.058594,58.950008
 
 seed_world: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=-180,-90,180,90
@@ -9,6 +9,10 @@ seed_world: $(result_csv)
 
 seed_region: $(result_csv)
 	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench.toml --maxzoom=10 --tileset=ne --extent=$(region_bbox)
+	@echo Statistics written to $(result_csv)
+
+seed_region_small: $(result_csv)
+	time -f "$(ts),$(sw),$@,%E,%U,%S" -a -o $(result_csv) t_rex generate --config mvtbench-small.toml --maxzoom=6 --extent=$(region_bbox)
 	@echo Statistics written to $(result_csv)
 
 seed_region_4: $(result_csv)
@@ -28,6 +32,7 @@ http:
 	docker run --rm --net=host -v $$PWD:/bench williamyeh/wrk -H 'Accept-Encoding: gzip' -H 'Connection: keep-alive' --latency -d 5 -c 4 --timeout 8 -t 4 -s /bench/httpbench.lua http://127.0.0.1:6767
 	# 32 connections
 	docker run --rm --net=host -v $$PWD:/bench williamyeh/wrk -H 'Accept-Encoding: gzip' -H 'Connection: keep-alive' --latency -d 5 -c 32 --timeout 8 -t 4 -s /bench/httpbench.lua http://127.0.0.1:6767
+	@echo Statistics written to results_http.csv
 
 stats:
 	find /tmp/mvtcache/ne -name '*pbf' | wc -l

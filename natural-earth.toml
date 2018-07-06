@@ -665,11 +665,11 @@ sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_land WHE
 minzoom = 5
 maxzoom = 10
 #sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-sql = """SELECT ST_Multi(ST_Union(f.geom)) as wkb_geometry, ogc_fid, featurecla, min_zoom FROM
-         (SELECT (ST_Dump(wkb_geometry)).geom AS geom, ogc_fid, featurecla, min_zoom FROM ne_10m_land_subdivided
+sql = """SELECT ST_Multi(ST_Union(f.geom)) as wkb_geometry, featurecla, min_zoom FROM
+         (SELECT (ST_Dump(wkb_geometry)).geom AS geom, featurecla, min_zoom FROM ne_10m_land_subdivided
           WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!
          ) AS f
-         GROUP BY ogc_fid, featurecla, min_zoom"""
+         GROUP BY featurecla, min_zoom"""
 
 [[tileset.layer]]
 name = "minor_islands"
@@ -702,19 +702,19 @@ sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_110m_ocean W
 minzoom = 3
 maxzoom = 4
 #sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_50m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-sql = """SELECT ST_Multi(ST_Union(wkb_geometry)) as wkb_geometry, ogc_fid, featurecla, min_zoom
+sql = """SELECT ST_Multi(ST_Union(wkb_geometry)) as wkb_geometry, featurecla, min_zoom
          FROM ne_50m_ocean_subdivided
          WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!
-         GROUP BY ogc_fid, featurecla, min_zoom"""
+         GROUP BY featurecla, min_zoom"""
 [[tileset.layer.query]]
 # ne_10m_ocean
 minzoom = 5
 maxzoom = 10
 #sql = """SELECT wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_ocean WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!"""
-sql = """SELECT ST_Multi(ST_Union(wkb_geometry)) as wkb_geometry, ogc_fid, featurecla, min_zoom
+sql = """SELECT ST_Multi(ST_Union(wkb_geometry)) as wkb_geometry, featurecla, min_zoom
          FROM ne_10m_ocean_subdivided
          WHERE min_zoom::integer <= !zoom! AND wkb_geometry && !bbox!
-         GROUP BY ogc_fid, featurecla, min_zoom"""
+         GROUP BY featurecla, min_zoom"""
 
 [cache.file]
 base = "/tmp/mvtcache"
@@ -728,4 +728,4 @@ port = 6767
 
 [[webserver.static]]
 path = "/map"
-dir = "./map/"
+dir = "./maps/"

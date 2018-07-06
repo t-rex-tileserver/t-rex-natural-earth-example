@@ -89,4 +89,4 @@ port = 6767
 
 [[webserver.static]]
 path = "/map"
-dir = "./map/"
+dir = "./maps/"

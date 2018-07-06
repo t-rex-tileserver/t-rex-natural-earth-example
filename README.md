@@ -21,7 +21,7 @@ DB Setup
 
 Data: NaturalEarth 4.1 ([Site](http://www.naturalearthdata.com/) / [Github](https://github.com/nvkelso/natural-earth-vector)) is used as test data.
 
-    make data import
+    make data import import_points optimize
 
 
 Run quickstart example
@@ -39,7 +39,7 @@ DB connection via TCP:
 
 Start tile server:
 
-    serve --config natural-earth.toml
+    t_rex serve --config natural-earth.toml
 
 Open map:
 
@@ -51,7 +51,7 @@ Run country example
 
 Start tile server:
 
-    serve --config natural-earth-countries.toml
+    t_rex serve --config natural-earth-countries.toml
 
 Open map:
 

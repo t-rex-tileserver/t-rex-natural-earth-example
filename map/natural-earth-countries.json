@@ -135,7 +135,7 @@
     "minzoom":1.8,
     "maxzoom":3,
     "layout": {
-      "text-field": ["get", "name"],
+      "text-field": ["get", "abbrev"],
       "text-transform": "uppercase",
       "text-max-width": 20,
       "text-size": {
@@ -159,7 +159,7 @@
     "source-layer": "country-name",
     "minzoom":3,
     "layout": {
-      "text-field": ["get", "sr_subunit"],
+      "text-field": ["get", "name"],
       "text-transform": "uppercase",
       "text-max-width": 20,
       "text-size": {

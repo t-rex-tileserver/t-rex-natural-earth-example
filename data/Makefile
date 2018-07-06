@@ -10,17 +10,27 @@ createdb:
 gpkgdump:
 	ogr2ogr -f GPKG mvtbench.gpkg PG:dbname=$(DBNAME)
 
+gpkgdump_small:
+	ogr2ogr -f GPKG mvtbench-small.gpkg PG:dbname=$(DBNAME) ne_50m_admin_0_countries ne_10m_admin_0_boundary_lines_land ne_10m_admin_0_country_points ne_10m_admin_1_states_provinces_lines ne_10m_geographic_lines
+
 gpkgrestore:
 	ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) mvtbench.gpkg
 
 # Raw data import
 
-data: packages/natural_earth_vector.sqlite
+data: packages/natural_earth_vector.sqlite vector-tiles-sample-master/countries.tm2source/files/b56c4047-10m-admin-0-country-points.shp
 
 natural_earth_vector.sqlite.zip:
 	wget http://naciscdn.org/naturalearth/packages/natural_earth_vector.sqlite.zip
 
 packages/natural_earth_vector.sqlite: natural_earth_vector.sqlite.zip
+	unzip $< $@
+	touch $@
+
+vector-tiles-sample.zip:
+	wget -O vector-tiles-sample.zip https://github.com/klokantech/vector-tiles-sample/archive/master.zip
+
+vector-tiles-sample-master/countries.tm2source/files/b56c4047-10m-admin-0-country-points.shp: vector-tiles-sample.zip
 	unzip $< $@
 	touch $@
 
@@ -102,6 +112,9 @@ POINT_LAYERS = ne_10m_admin_0_label_points \
 import: packages/natural_earth_vector.sqlite
 	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 -nlt PROMOTE_TO_MULTI $< $(LAYERS)
 	OGR_ENABLE_PARTIAL_REPROJECTION=true ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 $< $(POINT_LAYERS)
+
+import_points: vector-tiles-sample-master/countries.tm2source/files/b56c4047-10m-admin-0-country-points.shp
+	ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) -t_srs EPSG:3857 -nln ne_10m_admin_0_country_points $<
 
 optimize:
 	psql $(DBNAME) -c "CREATE TABLE ne_10m_land_subdivided AS SELECT ST_Subdivide(wkb_geometry) AS wkb_geometry, ogc_fid, featurecla, min_zoom FROM ne_10m_land"

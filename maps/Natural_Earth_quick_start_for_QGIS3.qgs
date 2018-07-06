@@ -21,12 +21,12 @@
     <customproperties/>
     <layer-tree-group checked="Qt::Checked" name="admin_0_map_subunits" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_50m_admin_0_map_subunits20180703172457881" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_admin_0_map_subunits&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_map_subunits" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_0_map_subunits20180703172457881" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_admin_0_map_subunits&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_map_subunits" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_10m_admin_0_map_subunits20180703172510234" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_admin_0_map_subunits&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_map_subunits" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_map_subunits20180703172510234" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_admin_0_map_subunits&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_map_subunits" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -34,17 +34,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="marine_polys" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_geography_marine_polys20180703173235403" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_10m_geography_marine_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_geography_marine_polys20180703173235403" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_10m_geography_marine_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_geography_marine_polys20180703173235416" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_110m_geography_marine_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_geography_marine_polys20180703173235416" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_110m_geography_marine_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_geography_marine_polys20180703173235427" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_50m_geography_marine_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_geography_marine_polys20180703173235427" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_geography_marine_polys&quot; (wkb_geometry) sql=" name="ne_50m_geography_marine_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -52,17 +52,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="countries" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_50m_admin_0_countries20180703172430241" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_countries" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_0_countries20180703172430241" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_countries" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_10m_admin_0_countries20180703172430256" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_countries" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_countries20180703172430256" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_countries" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_admin_0_countries20180703172430269" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_110m_admin_0_countries" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_admin_0_countries20180703172430269" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_admin_0_countries&quot; (wkb_geometry) sql=" name="ne_110m_admin_0_countries" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -70,7 +70,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="map_units" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_map_units20180703172243205" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_map_units&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_map_units" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_map_units20180703172243205" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_map_units&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_map_units" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -78,17 +78,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="populated_places" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_populated_places20180703172632693" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_populated_places&quot; (wkb_geometry) sql=" name="ne_10m_populated_places" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_populated_places20180703172632693" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_populated_places&quot; (wkb_geometry) sql=" name="ne_10m_populated_places" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_populated_places20180703172632709" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_110m_populated_places&quot; (wkb_geometry) sql=" name="ne_110m_populated_places" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_populated_places20180703172632709" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_110m_populated_places&quot; (wkb_geometry) sql=" name="ne_110m_populated_places" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_populated_places20180703172632721" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_50m_populated_places&quot; (wkb_geometry) sql=" name="ne_50m_populated_places" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_populated_places20180703172632721" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_50m_populated_places&quot; (wkb_geometry) sql=" name="ne_50m_populated_places" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -96,7 +96,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="parks_and_protected_lands_point" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_parks_and_protected_lands_point20180703172212458" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_point&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_point" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_parks_and_protected_lands_point20180703172212458" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_point&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_point" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -104,7 +104,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="geography_regions_points" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_geography_regions_points20180703173418708" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_geography_regions_points&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_points" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_geography_regions_points20180703173418708" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_geography_regions_points&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_points" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -112,12 +112,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="elevation_points" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_geography_regions_elevation_points20180703173342250" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_geography_regions_elevation_points&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_elevation_points" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_geography_regions_elevation_points20180703173342250" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_10m_geography_regions_elevation_points&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_elevation_points" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_geography_regions_elevation_points20180703173342263" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_50m_geography_regions_elevation_points&quot; (wkb_geometry) sql=" name="ne_50m_geography_regions_elevation_points" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_geography_regions_elevation_points20180703173342263" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table=&quot;public&quot;.&quot;ne_50m_geography_regions_elevation_points&quot; (wkb_geometry) sql=" name="ne_50m_geography_regions_elevation_points" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -125,19 +125,19 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="geography_regions_polys" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_geography_regions_polys20180703173446680" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_geography_regions_polys20180703173446680" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_10m_geography_regions_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_geography_regions_polys20180703173446693" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_110m_geography_regions_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_geography_regions_polys20180703173446693" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_110m_geography_regions_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
           <property key="legend/expressionFilter" value=""/>
           <property key="legend/expressionFilterEnabled" value="false"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_geography_regions_polys20180703173446706" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_50m_geography_regions_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_geography_regions_polys20180703173446706" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_geography_regions_polys&quot; (wkb_geometry) sql=" name="ne_50m_geography_regions_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -145,7 +145,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="roads" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_roads20180703172652052" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_roads&quot; (wkb_geometry) sql=" name="ne_10m_roads" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_roads20180703172652052" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_roads&quot; (wkb_geometry) sql=" name="ne_10m_roads" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -153,12 +153,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="geographic_lines" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_geographic_lines20180703172743762" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_geographic_lines&quot; (wkb_geometry) sql=" name="ne_10m_geographic_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_geographic_lines20180703172743762" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_geographic_lines&quot; (wkb_geometry) sql=" name="ne_10m_geographic_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_geographic_lines20180703172743773" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_geographic_lines&quot; (wkb_geometry) sql=" name="ne_50m_geographic_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_geographic_lines20180703172743773" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_geographic_lines&quot; (wkb_geometry) sql=" name="ne_50m_geographic_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -166,7 +166,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="lakes_historic" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_lakes_historic20180703173832091" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_historic&quot; (wkb_geometry) sql=" name="ne_10m_lakes_historic" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_lakes_historic20180703173832091" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_historic&quot; (wkb_geometry) sql=" name="ne_10m_lakes_historic" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -174,7 +174,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="playas" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_playas20180703174112687" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_playas&quot; (wkb_geometry) sql=" name="ne_10m_playas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_playas20180703174112687" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_playas&quot; (wkb_geometry) sql=" name="ne_10m_playas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -182,7 +182,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="minor_islands" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_minor_islands20180703174330499" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_minor_islands&quot; (wkb_geometry) sql=" name="ne_10m_minor_islands" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_minor_islands20180703174330499" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_minor_islands&quot; (wkb_geometry) sql=" name="ne_10m_minor_islands" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -190,7 +190,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="reefs" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_reefs20180703174051153" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_reefs&quot; (wkb_geometry) sql=" name="ne_10m_reefs" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_reefs20180703174051153" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_reefs&quot; (wkb_geometry) sql=" name="ne_10m_reefs" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -198,17 +198,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="admin_1_lines" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_admin_1_states_provinces_lines20180703172557252" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_10m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_1_states_provinces_lines20180703172557252" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_10m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_admin_1_states_provinces_lines20180703172557262" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_110m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_admin_1_states_provinces_lines20180703172557262" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_110m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_admin_1_states_provinces_lines20180703172557272" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_50m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_1_states_provinces_lines20180703172557272" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_1_states_provinces_lines&quot; (wkb_geometry) sql=" name="ne_50m_admin_1_states_provinces_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -216,17 +216,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="boundary_lines_land" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_land20180703171729564" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_land20180703171729564" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_admin_0_boundary_lines_land20180703171711810" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_110m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_admin_0_boundary_lines_land20180703171711810" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_110m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_land20180703171659201" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_land20180703171659201" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_land&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -234,12 +234,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="boundary_lines_disputed" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_disputed_areas20180703171906400" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_disputed_areas&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_disputed_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_disputed_areas20180703171906400" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_disputed_areas&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_disputed_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_disputed_areas20180703171906412" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_disputed_areas&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_disputed_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_disputed_areas20180703171906412" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_disputed_areas&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_disputed_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -247,17 +247,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="rivers_lake_centerlines_scale_rank" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_110m_rivers_lake_centerlines20180703173757689" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_110m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_rivers_lake_centerlines20180703173757689" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_110m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_10m_rivers_lake_centerlines_scale_rank20180703173542568" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_lake_centerlines_scale_rank&quot; (wkb_geometry) sql=" name="ne_10m_rivers_lake_centerlines_scale_rank" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_rivers_lake_centerlines_scale_rank20180703173542568" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_lake_centerlines_scale_rank&quot; (wkb_geometry) sql=" name="ne_10m_rivers_lake_centerlines_scale_rank" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_rivers_lake_centerlines_scale_rank20180703173542580" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_rivers_lake_centerlines_scale_rank&quot; (wkb_geometry) sql=" name="ne_50m_rivers_lake_centerlines_scale_rank" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_rivers_lake_centerlines_scale_rank20180703173542580" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_rivers_lake_centerlines_scale_rank&quot; (wkb_geometry) sql=" name="ne_50m_rivers_lake_centerlines_scale_rank" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -265,12 +265,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="rivers_lake_centerlines" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_rivers_lake_centerlines20180703173757645" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_10m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_rivers_lake_centerlines20180703173757645" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_10m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_rivers_lake_centerlines20180703173757708" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_50m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_rivers_lake_centerlines20180703173757708" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_rivers_lake_centerlines&quot; (wkb_geometry) sql=" name="ne_50m_rivers_lake_centerlines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -278,7 +278,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="rivers_europe" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_rivers_europe20180703173722212" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_europe&quot; (wkb_geometry) sql=" name="ne_10m_rivers_europe" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_rivers_europe20180703173722212" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_europe&quot; (wkb_geometry) sql=" name="ne_10m_rivers_europe" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -286,7 +286,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="rivers_north_america" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_rivers_north_america20180703173627456" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_north_america&quot; (wkb_geometry) sql=" name="ne_10m_rivers_north_america" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_rivers_north_america20180703173627456" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_rivers_north_america&quot; (wkb_geometry) sql=" name="ne_10m_rivers_north_america" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -294,12 +294,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="boundary_lines_maritime" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_maritime_indicator20180703172330436" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_maritime_indicator&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_maritime_indicator" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_admin_0_boundary_lines_maritime_indicator20180703172330436" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_admin_0_boundary_lines_maritime_indicator&quot; (wkb_geometry) sql=" name="ne_10m_admin_0_boundary_lines_maritime_indicator" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_maritime_indicator20180703172330443" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_maritime_indicator&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_maritime_indicator" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_admin_0_boundary_lines_maritime_indicator20180703172330443" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_admin_0_boundary_lines_maritime_indicator&quot; (wkb_geometry) sql=" name="ne_50m_admin_0_boundary_lines_maritime_indicator" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -307,19 +307,19 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="coastline" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_coastline20180703173002168" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_coastline&quot; (wkb_geometry) sql=" name="ne_10m_coastline" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_coastline20180703173002168" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_coastline&quot; (wkb_geometry) sql=" name="ne_10m_coastline" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
           <property key="legend/expressionFilter" value=""/>
           <property key="legend/expressionFilterEnabled" value="false"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_coastline20180703173002180" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_coastline&quot; (wkb_geometry) sql=" name="ne_110m_coastline" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_coastline20180703173002180" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_110m_coastline&quot; (wkb_geometry) sql=" name="ne_110m_coastline" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_coastline20180703173002189" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_coastline&quot; (wkb_geometry) sql=" name="ne_50m_coastline" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_coastline20180703173002189" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_coastline&quot; (wkb_geometry) sql=" name="ne_50m_coastline" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
           <property key="legend/expressionFilter" value=""/>
@@ -329,7 +329,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="parks_and_protected_lands_line" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_parks_and_protected_lands_line20180703172143322" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_line&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_line" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_parks_and_protected_lands_line20180703172143322" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_line&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_line" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -337,7 +337,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="parks_and_protected_lands_area" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_parks_and_protected_lands_area20180703172053197" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_area&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_area" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_parks_and_protected_lands_area20180703172053197" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_parks_and_protected_lands_area&quot; (wkb_geometry) sql=" name="ne_10m_parks_and_protected_lands_area" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -345,7 +345,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="urban_areas" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_urban_areas20180703172710371" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_urban_areas&quot; (wkb_geometry) sql=" name="ne_10m_urban_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_urban_areas20180703172710371" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_urban_areas&quot; (wkb_geometry) sql=" name="ne_10m_urban_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
           <property key="overview" value="1"/>
@@ -354,14 +354,14 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="antarctic_ice_shelves_lines" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_antarctic_ice_shelves_lines20180703173050234" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_antarctic_ice_shelves_lines&quot; (wkb_geometry) sql=" name="ne_10m_antarctic_ice_shelves_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_antarctic_ice_shelves_lines20180703173050234" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_10m_antarctic_ice_shelves_lines&quot; (wkb_geometry) sql=" name="ne_10m_antarctic_ice_shelves_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
           <property key="legend/expressionFilter" value=""/>
           <property key="legend/expressionFilterEnabled" value="false"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_antarctic_ice_shelves_lines20180703173050245" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_antarctic_ice_shelves_lines&quot; (wkb_geometry) sql=" name="ne_50m_antarctic_ice_shelves_lines" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_antarctic_ice_shelves_lines20180703173050245" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table=&quot;public&quot;.&quot;ne_50m_antarctic_ice_shelves_lines&quot; (wkb_geometry) sql=" name="ne_50m_antarctic_ice_shelves_lines" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -369,12 +369,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="antarctic_ice_shelves_polys" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_50m_antarctic_ice_shelves_polys20180703173151484" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_antarctic_ice_shelves_polys&quot; (wkb_geometry) sql=" name="ne_50m_antarctic_ice_shelves_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_antarctic_ice_shelves_polys20180703173151484" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_antarctic_ice_shelves_polys&quot; (wkb_geometry) sql=" name="ne_50m_antarctic_ice_shelves_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_10m_antarctic_ice_shelves_polys20180703173151495" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_antarctic_ice_shelves_polys&quot; (wkb_geometry) sql=" name="ne_10m_antarctic_ice_shelves_polys" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_antarctic_ice_shelves_polys20180703173151495" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_antarctic_ice_shelves_polys&quot; (wkb_geometry) sql=" name="ne_10m_antarctic_ice_shelves_polys" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -382,17 +382,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="lakes" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_lakes20180703173915201" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes&quot; (wkb_geometry) sql=" name="ne_10m_lakes" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_lakes20180703173915201" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes&quot; (wkb_geometry) sql=" name="ne_10m_lakes" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_lakes20180703173915242" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_lakes&quot; (wkb_geometry) sql=" name="ne_110m_lakes" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_lakes20180703173915242" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_lakes&quot; (wkb_geometry) sql=" name="ne_110m_lakes" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_lakes20180703173915252" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_lakes&quot; (wkb_geometry) sql=" name="ne_50m_lakes" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_lakes20180703173915252" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_lakes&quot; (wkb_geometry) sql=" name="ne_50m_lakes" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -400,7 +400,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="lakes_europe" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_lakes_europe20180703174027620" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_europe&quot; (wkb_geometry) sql=" name="ne_10m_lakes_europe" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_lakes_europe20180703174027620" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_europe&quot; (wkb_geometry) sql=" name="ne_10m_lakes_europe" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -408,7 +408,7 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="lakes_north_america" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_lakes_north_america20180703173946137" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_north_america&quot; (wkb_geometry) sql=" name="ne_10m_lakes_north_america" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_lakes_north_america20180703173946137" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_lakes_north_america&quot; (wkb_geometry) sql=" name="ne_10m_lakes_north_america" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -416,17 +416,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="glaciated_areas" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_glaciated_areas20180703174206887" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_10m_glaciated_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_glaciated_areas20180703174206887" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_10m_glaciated_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_glaciated_areas20180703174206911" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_110m_glaciated_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_glaciated_areas20180703174206911" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_110m_glaciated_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_glaciated_areas20180703174206942" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_50m_glaciated_areas" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_glaciated_areas20180703174206942" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_glaciated_areas&quot; (wkb_geometry) sql=" name="ne_50m_glaciated_areas" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -434,17 +434,17 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="land" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_10m_land20180703174253871" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_land&quot; (wkb_geometry) sql=" name="ne_10m_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_10m_land20180703174253871" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_10m_land&quot; (wkb_geometry) sql=" name="ne_10m_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_110m_land20180703174254004" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_land&quot; (wkb_geometry) sql=" name="ne_110m_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_land20180703174254004" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_land&quot; (wkb_geometry) sql=" name="ne_110m_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_land20180703174254014" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_land&quot; (wkb_geometry) sql=" name="ne_50m_land" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_land20180703174254014" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_land&quot; (wkb_geometry) sql=" name="ne_50m_land" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -452,12 +452,12 @@
     </layer-tree-group>
     <layer-tree-group checked="Qt::Checked" name="ocean" expanded="0">
       <customproperties/>
-      <layer-tree-layer id="ne_110m_ocean20180703174415884" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_ocean&quot; (wkb_geometry) sql=" name="ne_110m_ocean" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_110m_ocean20180703174415884" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_110m_ocean&quot; (wkb_geometry) sql=" name="ne_110m_ocean" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
       </layer-tree-layer>
-      <layer-tree-layer id="ne_50m_ocean20180703174415906" checked="Qt::Checked" source="dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_ocean&quot; (wkb_geometry) sql=" name="ne_50m_ocean" expanded="0" providerKey="postgres">
+      <layer-tree-layer id="ne_50m_ocean20180703174415906" checked="Qt::Checked" source="dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table=&quot;public&quot;.&quot;ne_50m_ocean&quot; (wkb_geometry) sql=" name="ne_50m_ocean" expanded="0" providerKey="postgres">
         <customproperties>
           <property key="expandedLegendNodes"/>
         </customproperties>
@@ -1038,7 +1038,7 @@
         <ymax>6225056.97332219034433365</ymax>
       </extent>
       <id>ne_10m_admin_0_boundary_lines_disputed_areas20180703171906412</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_disputed_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_disputed_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1527,7 +1527,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11185338</ymax>
       </extent>
       <id>ne_10m_admin_0_boundary_lines_land20180703171729564</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2103,7 +2103,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7519790.5651514595374465</ymax>
       </extent>
       <id>ne_10m_admin_0_boundary_lines_map_units20180703172243205</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_map_units" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_map_units" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2344,7 +2344,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11027758</ymax>
       </extent>
       <id>ne_10m_admin_0_boundary_lines_maritime_indicator20180703172330436</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_maritime_indicator" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_0_boundary_lines_maritime_indicator" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2631,7 +2631,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18694466</ymax>
       </extent>
       <id>ne_10m_admin_0_countries20180703172430256</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_admin_0_countries" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_admin_0_countries" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4213,7 +4213,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18694466</ymax>
       </extent>
       <id>ne_10m_admin_0_map_subunits20180703172510234</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_admin_0_map_subunits" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_admin_0_map_subunits" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5956,7 +5956,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>16416848</ymax>
       </extent>
       <id>ne_10m_admin_1_states_provinces_lines20180703172557252</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -6637,7 +6637,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-9453503</ymax>
       </extent>
       <id>ne_10m_antarctic_ice_shelves_lines20180703173050234</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_antarctic_ice_shelves_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_antarctic_ice_shelves_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -6885,7 +6885,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-9430420</ymax>
       </extent>
       <id>ne_10m_antarctic_ice_shelves_polys20180703173151495</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_antarctic_ice_shelves_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_antarctic_ice_shelves_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -7153,7 +7153,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18622376</ymax>
       </extent>
       <id>ne_10m_coastline20180703173002168</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_coastline" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_coastline" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -7395,7 +7395,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>108777091.69237299263477325</ymax>
       </extent>
       <id>ne_10m_geographic_lines20180703172743762</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_geographic_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_geographic_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8063,7 +8063,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18587250</ymax>
       </extent>
       <id>ne_10m_geography_marine_polys20180703173235403</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_geography_marine_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_geography_marine_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -8911,7 +8911,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18288346</ymax>
       </extent>
       <id>ne_10m_geography_regions_elevation_points20180703173342250</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_geography_regions_elevation_points" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_geography_regions_elevation_points" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -9702,7 +9702,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>17723818</ymax>
       </extent>
       <id>ne_10m_geography_regions_points20180703173418708</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_geography_regions_points" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_geography_regions_points" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -10433,7 +10433,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>19503954</ymax>
       </extent>
       <id>ne_10m_geography_regions_polys20180703173446680</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_geography_regions_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_geography_regions_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -11275,7 +11275,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18901784</ymax>
       </extent>
       <id>ne_10m_glaciated_areas20180703174206887</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_glaciated_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_glaciated_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -11543,7 +11543,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>17049546</ymax>
       </extent>
       <id>ne_10m_lakes20180703173915201</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -12508,7 +12508,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>10950100</ymax>
       </extent>
       <id>ne_10m_lakes_europe20180703174027620</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_europe" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_europe" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -13488,7 +13488,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>5920214.67838026024401188</ymax>
       </extent>
       <id>ne_10m_lakes_historic20180703173832091</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_historic" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_historic" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -14152,7 +14152,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>12286073</ymax>
       </extent>
       <id>ne_10m_lakes_north_america20180703173946137</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_north_america" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_lakes_north_america" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15057,7 +15057,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18428920.01294999942183495</ymax>
       </extent>
       <id>ne_10m_land20180703174253871</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15295,7 +15295,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>14087979</ymax>
       </extent>
       <id>ne_10m_minor_islands20180703174330499</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_minor_islands" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_minor_islands" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15533,7 +15533,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>10687011</ymax>
       </extent>
       <id>ne_10m_parks_and_protected_lands_area20180703172053197</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_parks_and_protected_lands_area" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_parks_and_protected_lands_area" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -15852,7 +15852,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>8211267.51171257998794317</ymax>
       </extent>
       <id>ne_10m_parks_and_protected_lands_line20180703172143322</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_parks_and_protected_lands_line" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_parks_and_protected_lands_line" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -16175,7 +16175,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7802529</ymax>
       </extent>
       <id>ne_10m_parks_and_protected_lands_point20180703172212458</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_parks_and_protected_lands_point" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_parks_and_protected_lands_point" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -16486,7 +16486,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>7233288.5</ymax>
       </extent>
       <id>ne_10m_playas20180703174112687</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_playas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_playas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -17150,7 +17150,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>14611976</ymax>
       </extent>
       <id>ne_10m_populated_places20180703172632693</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_populated_places" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_10m_populated_places" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -19553,7 +19553,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>3339252.5</ymax>
       </extent>
       <id>ne_10m_reefs20180703174051153</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_reefs" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_reefs" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -19795,7 +19795,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11138790</ymax>
       </extent>
       <id>ne_10m_rivers_europe20180703173722212</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_europe" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_europe" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -20708,7 +20708,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>13383230</ymax>
       </extent>
       <id>ne_10m_rivers_lake_centerlines20180703173757645</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -21545,7 +21545,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>13383226</ymax>
       </extent>
       <id>ne_10m_rivers_lake_centerlines_scale_rank20180703173542568</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_lake_centerlines_scale_rank" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_lake_centerlines_scale_rank" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -22629,7 +22629,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>16130987</ymax>
       </extent>
       <id>ne_10m_rivers_north_america20180703173627456</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_north_america" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_rivers_north_america" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -23543,7 +23543,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11554801</ymax>
       </extent>
       <id>ne_10m_roads20180703172652052</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_roads" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_10m_roads" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -24400,7 +24400,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11078060</ymax>
       </extent>
       <id>ne_10m_urban_areas20180703172710371</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_urban_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_10m_urban_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -24659,7 +24659,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11214689</ymax>
       </extent>
       <id>ne_110m_admin_0_boundary_lines_land20180703171711810</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -24937,7 +24937,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18636210</ymax>
       </extent>
       <id>ne_110m_admin_0_countries20180703172430269</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_admin_0_countries" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_admin_0_countries" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -26519,7 +26519,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6289879</ymax>
       </extent>
       <id>ne_110m_admin_1_states_provinces_lines20180703172557262</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -26876,7 +26876,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18636210</ymax>
       </extent>
       <id>ne_110m_coastline20180703173002180</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_coastline" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_coastline" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -27118,7 +27118,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18394168.86978020146489143</ymax>
       </extent>
       <id>ne_110m_geography_marine_polys20180703173235416</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_geography_marine_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_geography_marine_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -27779,7 +27779,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>19503954</ymax>
       </extent>
       <id>ne_110m_geography_regions_polys20180703173446693</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_geography_regions_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_geography_regions_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -28446,7 +28446,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18164342.15220769867300987</ymax>
       </extent>
       <id>ne_110m_glaciated_areas20180703174206911</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_glaciated_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_glaciated_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -28684,7 +28684,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>10147317.10804090090095997</ymax>
       </extent>
       <id>ne_110m_lakes20180703173915242</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_lakes" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_lakes" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -29533,7 +29533,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18636210</ymax>
       </extent>
       <id>ne_110m_land20180703174254004</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -29771,7 +29771,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>19219556.29170800000429153</ymax>
       </extent>
       <id>ne_110m_ocean20180703174415884</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_ocean" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_110m_ocean" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -30009,7 +30009,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>9460187</ymax>
       </extent>
       <id>ne_110m_populated_places20180703172632709</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_110m_populated_places" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_110m_populated_places" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -32001,7 +32001,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>12087975.14835649915039539</ymax>
       </extent>
       <id>ne_110m_rivers_lake_centerlines20180703173757689</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_110m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -32838,7 +32838,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>6225056.97332219034433365</ymax>
       </extent>
       <id>ne_50m_admin_0_boundary_lines_disputed_areas20180703171906400</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_disputed_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_disputed_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33111,7 +33111,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11182215</ymax>
       </extent>
       <id>ne_50m_admin_0_boundary_lines_land20180703171659201</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33483,7 +33483,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>11027822</ymax>
       </extent>
       <id>ne_50m_admin_0_boundary_lines_maritime_indicator20180703172330443</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_maritime_indicator" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_0_boundary_lines_maritime_indicator" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33746,7 +33746,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18855574</ymax>
       </extent>
       <id>ne_50m_admin_0_countries20180703172430241</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_admin_0_countries" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_admin_0_countries" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -35328,7 +35328,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18855574</ymax>
       </extent>
       <id>ne_50m_admin_0_map_subunits20180703172457881</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_admin_0_map_subunits" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_admin_0_map_subunits" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -37072,7 +37072,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>14837992</ymax>
       </extent>
       <id>ne_50m_admin_1_states_provinces_lines20180703172557272</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_admin_1_states_provinces_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -37392,7 +37392,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-9521723</ymax>
       </extent>
       <id>ne_50m_antarctic_ice_shelves_lines20180703173050245</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_antarctic_ice_shelves_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_antarctic_ice_shelves_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -37640,7 +37640,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-9494134</ymax>
       </extent>
       <id>ne_50m_antarctic_ice_shelves_polys20180703173151484</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_antarctic_ice_shelves_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_antarctic_ice_shelves_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -37878,7 +37878,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18587468</ymax>
       </extent>
       <id>ne_50m_coastline20180703173002189</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_coastline" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_coastline" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -38120,7 +38120,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>108777091.69237299263477325</ymax>
       </extent>
       <id>ne_50m_geographic_lines20180703172743773</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_geographic_lines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_geographic_lines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -38788,7 +38788,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18587250</ymax>
       </extent>
       <id>ne_50m_geography_marine_polys20180703173235427</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_geography_marine_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_geography_marine_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -39455,7 +39455,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>10962201</ymax>
       </extent>
       <id>ne_50m_geography_regions_elevation_points20180703173342263</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_50m_geography_regions_elevation_points" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_50m_geography_regions_elevation_points" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -40246,7 +40246,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>19503954</ymax>
       </extent>
       <id>ne_50m_geography_regions_polys20180703173446706</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_geography_regions_polys" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_geography_regions_polys" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -40913,7 +40913,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18813836</ymax>
       </extent>
       <id>ne_50m_glaciated_areas20180703174206942</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_glaciated_areas" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_glaciated_areas" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -41151,7 +41151,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>17032178</ymax>
       </extent>
       <id>ne_50m_lakes20180703173915252</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_lakes" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_lakes" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -42030,7 +42030,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>18855574</ymax>
       </extent>
       <id>ne_50m_land20180703174254014</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_land" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_land" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -42268,7 +42268,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>32497317.095243901014328</ymax>
       </extent>
       <id>ne_50m_ocean20180703174415906</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_ocean" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiPolygon table="public"."ne_50m_ocean" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -42506,7 +42506,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>14631291</ymax>
       </extent>
       <id>ne_50m_populated_places20180703172632721</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_50m_populated_places" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=Point table="public"."ne_50m_populated_places" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -44739,7 +44739,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>12345928</ymax>
       </extent>
       <id>ne_50m_rivers_lake_centerlines20180703173757708</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_rivers_lake_centerlines" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -45590,7 +45590,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>12345928</ymax>
       </extent>
       <id>ne_50m_rivers_lake_centerlines_scale_rank20180703173542580</id>
-      <datasource>dbname='mvtbench' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_rivers_lake_centerlines_scale_rank" (wkb_geometry) sql=</datasource>
+      <datasource>dbname='naturalearth4' port=5432 sslmode=disable key='ogc_fid' srid=3857 type=MultiLineString table="public"."ne_50m_rivers_lake_centerlines_scale_rank" (wkb_geometry) sql=</datasource>
       <keywordList>
         <value></value>
       </keywordList>

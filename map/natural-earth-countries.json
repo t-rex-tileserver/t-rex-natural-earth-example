@@ -60,7 +60,7 @@
     "id": "area-white",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","ATA"],
+    "filter":["in","adm0_a3","ATA"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#F0F8FF"
@@ -69,7 +69,7 @@
     "id": "area-red",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","AFG","ALD","BEN","BLR","BWA","COK","COL","DNK","DOM","ERI","FIN","FRA","FRO","GIB","GNB","GNQ","GRC","GTM","JPN","KIR","LKA","MHL","MMR","MWI","NCL","OMN","RWA","SMR","SVK","SYR","TCD","TON","URY","WLF"],
+    "filter":["in","adm0_a3","AFG","ALD","BEN","BLR","BWA","COK","COL","DNK","DOM","ERI","FIN","FRA","FRO","GIB","GNB","GNQ","GRC","GTM","JPN","KIR","LKA","MHL","MMR","MWI","NCL","OMN","RWA","SMR","SVK","SYR","TCD","TON","URY","WLF"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#fdaf6b"
@@ -78,7 +78,7 @@
     "id": "area-orange",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","AZE","BGD","CHL","CMR","CSI","DEU","DJI","GUY","HUN","IOA","JAM","LBN","LBY","LSO","MDG","MKD","MNG","MRT","NIU","NZL","PCN","PYF","SAU","SHN","STP","TTO","UGA","UZB","ZMB"],
+    "filter":["in","adm0_a3","AZE","BGD","CHL","CMR","CSI","DEU","DJI","GUY","HUN","IOA","JAM","LBN","LBY","LSO","MDG","MKD","MNG","MRT","NIU","NZL","PCN","PYF","SAU","SHN","STP","TTO","UGA","UZB","ZMB"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#fdc663"
@@ -87,7 +87,7 @@
     "id": "area-yellow",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","AGO","ASM","ATF","BDI","BFA","BGR","BLZ","BRA","CHN","CRI","ESP","HKG","HRV","IDN","IRN","ISR","KNA","LBR","LCA","MAC","MUS","NOR","PLW","POL","PRI","SDN","TUN","UMI","USA","USG","VIR","VUT"],
+    "filter":["in","adm0_a3","AGO","ASM","ATF","BDI","BFA","BGR","BLZ","BRA","CHN","CRI","ESP","HKG","HRV","IDN","IRN","ISR","KNA","LBR","LCA","MAC","MUS","NOR","PLW","POL","PRI","SDN","TUN","UMI","USA","USG","VIR","VUT"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#fae364"
@@ -96,7 +96,7 @@
     "id": "area-green",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","ARE","ARG","BHS","CIV","CLP","DMA","ETH","GAB","GRD","GRL","HMD","IND","IOT","IRL","IRQ","ITA","KOS","LUX","MEX","NAM","NER","PHL","PRT","RUS","SEN","SUR","TZA","VAT"],
+    "filter":["in","adm0_a3","ARE","ARG","BHS","CIV","CLP","DMA","ETH","GAB","GRD","GRL","HMD","IND","IOT","IRL","IRQ","ITA","KOS","LUX","MEX","NAM","NER","PHL","PRT","RUS","SEN","SUR","TZA","VAT"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#d3e46f"
@@ -105,7 +105,7 @@
     "id": "area-turquoise",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","AUT","BEL","BHR","BMU","BRB","CYN","DZA","EST","FLK","GMB","GUM","HND","JEY","KGZ","LIE","MAF","MDA","NGA","NRU","SLB","SOL","SRB","SWZ","THA","TUR","VEN","VGB"],
+    "filter":["in","adm0_a3","AUT","BEL","BHR","BMU","BRB","CYN","DZA","EST","FLK","GMB","GUM","HND","JEY","KGZ","LIE","MAF","MDA","NGA","NRU","SLB","SOL","SRB","SWZ","THA","TUR","VEN","VGB"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#aadb78"
@@ -114,7 +114,7 @@
     "id": "area-blue",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","AIA","BIH","BLM","BRN","CAF","CHE","COM","CPV","CUB","ECU","ESB","FSM","GAZ","GBR","GEO","KEN","LTU","MAR","MCO","MDV","NFK","NPL","PNG","PRY","QAT","SLE","SPM","SYC","TCA","TKM","TLS","VNM","WEB","WSB","YEM","ZWE"],
+    "filter":["in","adm0_a3","AIA","BIH","BLM","BRN","CAF","CHE","COM","CPV","CUB","ECU","ESB","FSM","GAZ","GBR","GEO","KEN","LTU","MAR","MCO","MDV","NFK","NPL","PNG","PRY","QAT","SLE","SPM","SYC","TCA","TKM","TLS","VNM","WEB","WSB","YEM","ZWE"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#a3cec5"
@@ -123,7 +123,7 @@
     "id": "area-purple",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","ABW","ALB","AND","ATC","BOL","COD","CUW","CYM","CYP","EGY","FJI","GGY","IMN","KAB","KAZ","KWT","LAO","MLI","MNP","MSR","MYS","NIC","NLD","PAK","PAN","PRK","ROU","SGS","SVN","SWE","TGO","TWN","VCT","ZAF"],
+    "filter":["in","adm0_a3","ABW","ALB","AND","ATC","BOL","COD","CUW","CYM","CYP","EGY","FJI","GGY","IMN","KAB","KAZ","KWT","LAO","MLI","MNP","MSR","MYS","NIC","NLD","PAK","PAN","PRK","ROU","SGS","SVN","SWE","TGO","TWN","VCT","ZAF"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#ceb5cf"
@@ -132,7 +132,7 @@
     "id": "area-pink",
     "type": "fill",
     "source": "countries",
-    "filter":["in","ADM0_A3","ARM","ATG","AUS","BTN","CAN","COG","CZE","GHA","GIN","HTI","ISL","JOR","KHM","KOR","LVA","MLT","MNE","MOZ","PER","SAH","SGP","SLV","SOM","TJK","TUV","UKR","WSM"],
+    "filter":["in","adm0_a3","ARM","ATG","AUS","BTN","CAN","COG","CZE","GHA","GIN","HTI","ISL","JOR","KHM","KOR","LVA","MLT","MNE","MOZ","PER","SAH","SGP","SLV","SOM","TJK","TUV","UKR","WSM"],
     "source-layer": "country",
     "paint": {
       "fill-color": "#f3c1d3"
@@ -167,7 +167,7 @@
     "source": "countries",
     "source-layer": "state",
     "minzoom": 3,
-    "filter": ["in","ADM0_A3","USA","CAN","AUS"],
+    "filter": ["in","adm0_a3","USA","CAN","AUS"],
     "paint": {
       "line-color": "#226688",
       "line-opacity": 0.25,
@@ -182,8 +182,7 @@
     "minzoom":1.8,
     "maxzoom":3,
     "layout": {
-      "text-field": "{ABBREV}",
-      "text-font": ["Open Sans Semibold"],
+      "text-field": ["get", "name"],
       "text-transform": "uppercase",
       "text-max-width": 20,
       "text-size": {
@@ -207,8 +206,7 @@
     "source-layer": "country-name",
     "minzoom":3,
     "layout": {
-      "text-field": "{NAME}",
-      "text-font": ["Open Sans Semibold"],
+      "text-field": ["get", "sr_subunit"],
       "text-transform": "uppercase",
       "text-max-width": 20,
       "text-size": {
@@ -226,8 +224,7 @@
     "source-layer": "geo-lines",
     "minzoom":1,
     "layout": {
-      "text-field": "{DISPLAY}",
-      "text-font": ["Open Sans Semibold"],
+      "text-field": ["get", "name"],
       "text-offset": [0,1],
       "symbol-placement": "line",
       "symbol-spacing": 600,

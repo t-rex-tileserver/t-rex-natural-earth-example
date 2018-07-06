@@ -175,7 +175,6 @@
     "type": "symbol",
     "source": "countries",
     "source-layer": "geo-lines",
-    "minzoom":1,
     "layout": {
       "text-field": ["get", "name"],
       "text-offset": [0,1],

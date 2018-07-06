@@ -11,7 +11,7 @@ gpkgdump:
 	ogr2ogr -f GPKG mvtbench.gpkg PG:dbname=$(DBNAME)
 
 gpkgdump_small:
-	ogr2ogr -f GPKG mvtbench-small.gpkg PG:dbname=$(DBNAME) ne_50m_admin_0_countries ne_10m_admin_0_boundary_lines_land ne_10m_admin_0_country_points ne_10m_admin_1_states_provinces_lines ne_10m_geographic_lines
+	ogr2ogr -f GPKG mvtbench-small.gpkg PG:dbname=$(DBNAME) ne_10m_admin_0_countries ne_10m_admin_0_country_points ne_10m_admin_0_boundary_lines_land ne_10m_admin_1_states_provinces_lines ne_10m_geographic_lines ne_50m_geographic_lines
 
 gpkgrestore:
 	ogr2ogr -f PostgreSQL PG:dbname=$(DBNAME) mvtbench.gpkg

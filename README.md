@@ -5,6 +5,8 @@ This repo contains t-rex examples using NaturalEarth data.
 
 The main example uses the `natural-earth-quickstart` style from the Tegola web demo.
 
+![Screenshot](maps/natural-earth-quickstart.jpg)
+
 
 DB Setup
 --------
@@ -43,7 +45,7 @@ Start tile server:
 
 Open map:
 
-    http://127.0.0.1:6767/maps/map.html
+    http://127.0.0.1:6767/map/map.html
 
 
 Run country example
@@ -55,4 +57,4 @@ Start tile server:
 
 Open map:
 
-    http://127.0.0.1:6767/maps/map-countries.html
+    http://127.0.0.1:6767/map/map-countries.html
